@@ -1,0 +1,141 @@
+
+.AboutMe{
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 100px;
+    text-align: left;
+    gap: 50px;
+    grid-template-columns: 40% 55%;
+    background: #1b2430 ;
+    height: 100vh;
+}
+
+.profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img{
+    width: 80%;
+    padding: 70px 50px;
+    border-radius: 50%;
+    background-color: rgba(78, 78, 78, 0.096);
+}
+
+.AboutMe h1{
+color: rgb(157, 185, 179);
+
+}
+.AboutMe h2{
+color: rgb(157, 185, 179);
+}
+
+
+
+.Typewriter{
+    display: flex;
+    gap: 5px;
+}
+.Typewriter>:last-child{
+    color: teal;
+}
+
+.AboutMe p{
+color: rgb(157, 185, 179);
+width: 85%;
+font-size: 18px;
+line-height: 130%;
+}
+
+
+@media only screen and (max-width: 1100px) and (min-width: 900px){
+    .Typewriter{
+font-size: 18px;
+
+    }
+ 
+    .AboutMe p{
+        width: 95%;
+        font-size: 17px;
+    }
+    
+} 
+
+
+@media only screen and (max-width: 899px) and (min-width: 770px){
+    .Typewriter{
+display: flex;
+flex-direction: column;
+    }
+
+  
+     
+    .AboutMe p{
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+} 
+
+@media only screen and (max-width: 769px){
+  
+    .AboutMe{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 50px 10px;
+
+    }
+      
+  
+.AboutMe>:last-child h2{
+    display: flex;
+    flex-direction: column;
+}
+.profile img{
+    padding: 50px 20px;
+}
+}
+
+
+@media only screen and (max-width: 480px){
+.AboutMe p{
+    width: 100%;
+    font-size: 14px;
+}
+.profile img{
+    padding: 50px 30px;
+}
+}
+
+@media only screen and (max-width: 270px){
+
+    .AboutMe p{
+        width: 100%;
+        font-size: 12px;
+    }
+
+   .AboutMe h1{
+font-size: 24px;
+   }
+
+   .AboutMe h2{
+    font-size: 20px;
+   }
+   .profile img{
+    padding: 30px 15px;
+}
+}
