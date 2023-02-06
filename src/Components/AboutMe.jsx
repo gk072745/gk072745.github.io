@@ -32,7 +32,8 @@ I am an enthusiastic Developer who loves to solve real world problems with aweso
 
                     </div>
                     <div className={styles.resumeDiv}>
-                    <a href={process.env.PUBLIC_URL+"/Govind-Kumawat-Resume.pdf"} className={styles.resume}  download={true}>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
+                    <a href={"https://drive.google.com/uc?export=download&id=1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM"}className={styles.resume}  download={true} 
+                          onClick={()=>window.open("https://drive.google.com/file/d/1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM/view?usp=sharing") }>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
 
                     </div>
                  </div>
