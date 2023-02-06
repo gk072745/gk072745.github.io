@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+
+footer{
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px 0px;
+  text-align: center;
+  background-color:#1b2430;
+  color: #746a6aea;
+}
+
+@media screen and (max-width:768px) {
+footer{
+  font-size: 14px;
+}
+}
+
+@media screen and (max-width:350px) {
+  footer{
+    font-size: 10px;
+  }
+  }

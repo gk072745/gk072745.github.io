@@ -36,7 +36,10 @@ const setActiveBtn=(e)=>{
                         <A className="setActive"  onClick={(e)=>{setHamState(false);setActiveBtn(e)}}  activeClass="active" smooth spy to="Projects">Project</A>
                     </li>
                     <li>
-                        <A className="setActive" onClick={(e)=>{setHamState(false);setActiveBtn(e)}}  activeClass="active" smooth spy to="Contact">Contact & Resume</A>
+                        <A className="setActive" onClick={(e)=>{setHamState(false);setActiveBtn(e)}}  activeClass="active" smooth spy to="Contact">Contact</A>  
+                    </li>
+                    <li>
+                    <a href={process.env.PUBLIC_URL+"/Govind-Kumawat-Resume.pdf"} className={styles.resume}  download={true}>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
                     </li>
                  
                 </ul>

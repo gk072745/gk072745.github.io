@@ -8,7 +8,34 @@
     gap: 50px;
     grid-template-columns: 40% 55%;
     background: #1b2430 ;
-    height: 100vh;
+    min-height: 90vh;
+    
+}
+
+.resumeDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: max-content;
+    gap: 20px;
+}
+.resumeDiv h2{
+    margin: 0px;
+}
+
+.resume{
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+    width: max-content;
+    height: max-content;
+    border: 1px solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(45, 71, 94);
+    background: rgb(5,8,20);
+background: -moz-linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+background: -webkit-linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+background: linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050814",endColorstr="#5f7794",GradientType=1);
 }
 
 .profile{
@@ -29,7 +56,7 @@
 .profile img{
     width: 80%;
     padding: 70px 50px;
-    border-radius: 50%;
+    border-radius: 50px;
     background-color: rgba(78, 78, 78, 0.096);
 }
 
@@ -56,6 +83,7 @@ color: rgb(157, 185, 179);
 width: 85%;
 font-size: 18px;
 line-height: 130%;
+
 }
 
 
@@ -107,6 +135,9 @@ flex-direction: column;
 }
 .profile img{
     padding: 50px 20px;
+}
+.AboutMe p{
+    width: 100%;
 }
 }
 

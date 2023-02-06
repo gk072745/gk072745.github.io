@@ -1,0 +1,108 @@
+.main{
+    background-color:   #16253a;
+    min-height: 100vh;
+    text-align: center;
+    color: rgb(157, 185, 179);
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    }
+
+    
+
+    .tech{
+        /* width: 600px; */
+        width: 800px;
+        margin:25px auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .tech img{
+        width: 100%;  
+         
+    }
+
+
+    .tech div{
+        padding: 10px;
+        border-radius: 10px;
+        background: #16253a
+        /* background: linear-gradient(0deg, rgb(69, 77, 90) 0%, rgb(75, 78, 83) 78%, rgba(138, 141, 146, 0.9) 89%); */
+    }
+.tech div:hover{
+    
+background: #dbe9e6;
+transition: .5s ease-in-out;
+
+
+}
+
+
+
+@media only screen and (max-width: 850px){
+.tech{
+    width: 600px;
+}
+}
+
+@media only screen and (max-width: 650px){
+.tech{
+    width: 450px;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.main div:nth-child(9){
+    grid-column: 2 / 3;
+}
+.main div:nth-child(10){
+    grid-column: 3 / 4;
+}
+
+}
+@media only screen and (max-width: 500px){
+    .tech{
+        width: 400px;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .tech{
+        width: 300px;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+    } 
+    .main div:nth-child(9){
+        grid-column:auto
+    }
+    .main div:nth-child(10){
+        grid-column: 2/3;
+    width: 70%;
+    margin: auto;
+    }
+    }
+
+
+    @media only screen and (max-width: 350px){
+        .tech{
+            width: 200px;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+        } 
+        .main img{
+            width: 80%;
+        }
+        .main div:nth-child(9){
+            grid-column:auto
+        }
+        .main div:nth-child(10){
+            grid-column: auto;
+        }
+    }

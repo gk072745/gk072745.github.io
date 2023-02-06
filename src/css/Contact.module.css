@@ -1,0 +1,124 @@
+.main{
+    background-color:#0f1825;
+    min-height: 100vh;
+    text-align: center;
+    color: rgb(157, 185, 179);
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    }
+    .resume{
+        border: 1px solid;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(45, 71, 94);
+        font-weight: bold;
+        background: rgb(5,8,20);
+    background: -moz-linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+    background: -webkit-linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+    background: linear-gradient(0deg, rgba(5,8,20,1) 31%, rgba(17,32,51,0.8519782913165266) 54%, rgba(47,71,101,0.8519782913165266) 77%, rgba(95,119,148,0.8519782913165266) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050814",endColorstr="#5f7794",GradientType=1);
+    }
+
+    .sections{
+   width: 80%;
+   margin: auto;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 50px;
+        justify-content: center;
+
+    }
+
+    .sections>div:first-child{
+        text-align: left;
+        padding: 20px;
+    }
+
+    .touch{
+        display: grid;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .touch>div{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 5% 70%;
+        gap: 10px;
+
+
+    }
+
+    .touch a{
+        text-decoration: none;
+        color: rgb(173, 173, 173);
+        width: max-content;
+        font-size: 18px;
+    }
+
+    .Contact{
+        padding: 20px;
+    }
+
+    @media only screen and (max-width: 850px){
+    .sections{
+      width: 90%;
+
+    }
+    }
+@media only screen and (max-width: 750px){
+    .sections{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+        justify-content: center;
+     
+         }
+
+         
+}
+
+
+@media only screen and (max-width: 450px){
+    .sections{
+        width: 95%;
+        margin: auto;
+
+        gap: 10px;
+        justify-content: center;
+     
+         }
+         .main h2{
+            text-align: left;
+         }
+}
+
+
+@media only screen and (max-width: 350px){
+    .sections>div:first-child{
+        padding: 10px;
+    }
+ .main h1{
+    font-size: 28px;
+ }
+ .main h2{
+    font-size: 20px;
+    text-align: left;
+ }
+    .touch{
+        font-size: 16px;
+        gap: 10px;
+    }
+    .touch a{
+        font-size: 14px;
+    }
+
+
+}
+
+

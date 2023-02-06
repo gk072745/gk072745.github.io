@@ -9,13 +9,13 @@ return  (
 <div id="Home" className={styles.bc}>
 
      <div>
-        <h2>Hello, I'm a</h2>
+        <h2>Hello, I'm </h2>
      </div>
  <div>
  <h1>
         <Typewriter
   options={{
-    strings: ["FSD","Full Stack Developer"],
+    strings: ["Govind Kumawat","A Full Stack Developer"],
     autoStart: true,
     loop: true,
   }}

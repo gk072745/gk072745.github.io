@@ -1,0 +1,113 @@
+
+.gitStats>div{
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+}
+
+.gitStats>div>div{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+@media only screen and (max-width: 960px){
+    .gitStats img{
+        width: 40%;
+     }
+    }
+
+
+    
+@media only screen and (max-width: 769px){
+    .gitStats img{
+        width: 70%;
+     }
+
+     .calc h1{
+        font-size: 28px;
+      }  
+      .calc footer{
+        font-size: 18px !important;
+     } 
+    }
+
+    
+    @media only screen and (max-width: 570px){
+        .gitStats img{
+            width: 70%;
+         }
+         .calc footer{
+            font-size: 16px !important;
+         }
+         .calc h1{
+            font-size: 24px;
+            padding: 20px !important;
+          }   
+        }
+
+    @media only screen and (max-width: 480px){
+        .gitStats h1{
+            font-size: 24px;
+        }
+        .gitStats img{
+            width: 80%;
+         }
+
+         .calc footer{
+            font-size: 13px !important;
+         }
+         .calc h1{
+            font-size: 20px;
+            padding: 16px !important;
+          }   
+        }
+
+        @media only screen and (max-width: 400px){
+            .gitStats h1{
+                font-size: 20px;
+            }
+            .gitStats img{
+                width: 90%;
+             }
+    
+             .calc footer{
+               display: grid;
+               gap: 10px;
+               justify-content: center !important;
+             }
+
+            
+             .calc footer div:last-child{
+              display: none;
+                     }
+             .calc h1{
+                font-size: 16px ;
+                padding: 12px !important;
+              }  
+            }
+
+            @media only screen and (max-width: 300px){
+                .gitStats h1{
+                    font-size: 16px;
+                }
+                .gitStats img{
+                    width: 95%;
+                 }
+           
+      
+                }
+
+
+ @media only screen and (max-width: 900px){
+   .calc{
+     width: 95%;
+     margin: auto;
+   }             
+}  
