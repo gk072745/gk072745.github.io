@@ -1,4 +1,10 @@
 import React from 'react'
+import { AiFillHtml5 } from 'react-icons/ai'
+import { DiCss3 } from 'react-icons/di'
+import { FaReact } from 'react-icons/fa'
+import { IoLogoNodejs } from 'react-icons/io'
+import { SiChakraui, SiExpress, SiMongodb, SiRedux } from 'react-icons/si'
+import { TbBrandJavascript } from 'react-icons/tb'
 import styles from "../css/Projects.module.css"
 
 export const Projects = () => {
@@ -7,7 +13,58 @@ export const Projects = () => {
  <div className={styles.level1}>
  <h1>Projects</h1>
 <div className={styles.Projects}>
-  
+<div>
+  <div>
+  <img src={process.env.PUBLIC_URL + "/myntra.png"} alt="" />
+  <h2>Myntra.com</h2>
+ <p>Myntra.com is an E-commerce website for Men, Women & kids. Focusing on hassle free and enjoyable shopping experience to shoppers across the country with the widest range of brands and products on its portal.</p>
+<div className={styles.techDiv}>
+            <h3>Tech Stack</h3>
+            <div className={styles.tech}>
+           <AiFillHtml5 />
+           <DiCss3 />
+           <TbBrandJavascript />
+           <FaReact />
+           <SiRedux/>
+           <SiChakraui/>
+                        </div>
+      
+           </div>
+
+           <div className={styles.show}>
+           <a href="https://vastra-com.netlify.app/" target="_blank">Preview</a>
+            <a href="https://github.com/gk072745/vastra.com" target="_blank">Github</a>
+           </div>
+  </div>
+</div> 
+
+<div>
+         <div>
+          <img src={process.env.PUBLIC_URL + "/nykaa.png"} alt="" />
+           <h2>Nykaa.com</h2>
+           <p>Nykaa.com is an indian Lifestyle Brand and E-commerce platform. It offers a well-curated selection of products across makeup, skincare, haircare, bath and body, fragrance, luxury and premium brands.</p>
+           <div>
+            <h3>Tech Stack</h3>
+            <div className={styles.tech}>
+           <AiFillHtml5 />
+           <FaReact />
+           <SiRedux/>
+           <SiChakraui/>
+           <IoLogoNodejs />
+           <SiMongodb/>
+           </div>
+           </div>
+           <div>
+           
+           </div>
+
+           <div className={styles.show}>
+           <a href="https://glowup-com.netlify.app/" target="_blank">Preview</a>
+            <a href="https://github.com/gk072745/glowup.com" target="_blank">Github</a>
+           </div>
+         </div>
+</div>
+
 <div>
          <div>
           <img src={process.env.PUBLIC_URL + "/Bewkoof.png"} alt="" />
@@ -16,10 +73,14 @@ export const Projects = () => {
            <div>
             <h3>Tech Stack</h3>
             <div className={styles.tech}>
-             <img src="https://img.shields.io/badge/-React-05122A?style=flat&logo=react" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=flat&for-the-badge&logo=redux&logoColor=white" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/React_Router-CA4245?style=flat&for-the-badge&logo=react-router&logoColor=white" alt="" />&nbsp;
-            </div>
+           <AiFillHtml5 />
+           <DiCss3 />
+           <TbBrandJavascript />
+           <FaReact />
+           <SiRedux/>
+           <SiChakraui/>
+
+                        </div>
            </div>
            <div>
            
@@ -27,31 +88,7 @@ export const Projects = () => {
 
            <div className={styles.show}>
            <a href="https://fashion-store-3234.netlify.app/" target="_blank">Preview</a>
-            <a href="https://github.com/ankitatra/-upset-summer-4401" target="_blank">Github</a>
-           </div>
-         </div>
-</div>
-
- <div>
-         <div>
-          <img src={process.env.PUBLIC_URL + "/tripAdvisor.png"} alt="" />
-           <h2>Trip Advisor</h2>
-           <p>TripAdvisor is an online travel information and booking website that has reviews, photographs, and informative forums about various hotels and resorts all over the world.</p>
-           <div>
-            <h3>Tech Stack</h3>
-            <div className={styles.tech}>
-             <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" alt="" />&nbsp;
-            </div>
-           </div>
-           <div>
-           
-           </div>
-
-           <div className={styles.show}>
-           <a href="https://candid-zabaione-3fa313.netlify.app/" target="_blank">Preview</a>
-            <a href="https://github.com/gk072745/rabid-flower-3002" target="_blank">Github</a>
+            <a href="https://github.com/gk072745/Bewakoof.com-Clone" target="_blank">Github</a>
            </div>
          </div>
 </div>
@@ -65,10 +102,11 @@ reservations & other travel products. Guests can also search for car rentals, ai
 <div className={styles.techDiv}>
             <h3>Tech Stack</h3>
             <div className={styles.tech}>
-             <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" alt="" />&nbsp;
-            </div>
+           <AiFillHtml5 />
+           <DiCss3 />
+           <TbBrandJavascript />
+
+                        </div>
       
            </div>
 
@@ -79,27 +117,7 @@ reservations & other travel products. Guests can also search for car rentals, ai
   </div>
 </div>
 
-<div>
-  <div>
-  <img src={process.env.PUBLIC_URL + "/semrush.png"} alt="" />
-  <h2>Semrush.com</h2>
- <p>Semrush.com is an American public company that offers a SaaS platform known as Semrush. The platform is used for keyword research and online ranking data, including metrics such as search volume.</p>
-<div className={styles.techDiv}>
-            <h3>Tech Stack</h3>
-            <div className={styles.tech}>
-             <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6" alt="" />&nbsp;
-             <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" alt="" />&nbsp;
-            </div>
-      
-           </div>
 
-           <div className={styles.show}>
-           <a href="https://relaxed-vacherin-74ac83.netlify.app/" target="_blank">Preview</a>
-            <a href="https://github.com/gk072745/spiteful-toothbrush-9776" target="_blank">Github</a>
-           </div>
-  </div>
-</div>
 
 </div>
  </div>

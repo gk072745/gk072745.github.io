@@ -15,12 +15,41 @@ gap: 20px;
     gap: 20px;
 }
 
+.reload{
+  position: absolute;
+  right: 3%;
+  font-size: 40px;
+  color: #e03c80;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+.reload{
+  position: absolute;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% { left: 95%; }
+  50% { left: calc( 100% - 8% ); }
+  100% { left: 95%; }
+}
 
 
 @media only screen and (max-width: 960px){
     .gitStats img{
         width: 40%;
      }
+     
+.reload{
+  position: absolute;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% { left: 90%; }
+  50% { left: calc( 100% - 8% ); }
+  100% { left: 90%; }
+}
+
     }
 
 
@@ -36,6 +65,16 @@ gap: 20px;
       .calc footer{
         font-size: 18px !important;
      } 
+     .reload{
+      font-size: 32px;   
+    }
+
+    @keyframes bounce {
+      0% { left: 90%; }
+      50% { left: calc( 90% - 6% ); }
+      100% { left: 90%; }
+    }
+    
     }
 
     
@@ -49,7 +88,16 @@ gap: 20px;
          .calc h1{
             font-size: 24px;
             padding: 20px !important;
-          }   
+          }  
+          .reload{
+            font-size: 28px;   
+          }
+      
+          @keyframes bounce {
+            0% { left: 90%; }
+            50% { left: calc( 90% - 6% ); }
+            100% { left: 90%; }
+          } 
         }
 
     @media only screen and (max-width: 480px){
@@ -90,6 +138,15 @@ gap: 20px;
              .calc h1{
                 font-size: 16px ;
                 padding: 12px !important;
+              } 
+              .reload{
+                font-size: 24px;   
+              }
+          
+              @keyframes bounce {
+                0% { left: 92%; }
+                50% { left: calc( 92% - 6% ); }
+                100% { left: 92%; }
               }  
             }
 
@@ -100,8 +157,15 @@ gap: 20px;
                 .gitStats img{
                     width: 95%;
                  }
-           
-      
+                 .reload{
+                  font-size: 20px;   
+                }
+          
+                @keyframes bounce {
+                  0% { left: 90%; }
+                  50% { left: calc( 90% - 6% ); }
+                  100% { left: 90%; }
+                } 
                 }
 
 

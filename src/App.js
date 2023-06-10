@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 import { Navbar } from './Components/Navbar';
 import { AboutMe } from './Components/AboutMe';
 import { Home } from './Components/Home';
@@ -10,6 +11,10 @@ import { Contact } from './Components/Contact';
 
 function App() {
   document.title="Govind-Portfolio"
+
+
+  
+
   return (
     <div className="App">
       <Navbar/>

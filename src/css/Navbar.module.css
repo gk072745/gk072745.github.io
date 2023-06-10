@@ -11,9 +11,7 @@
     top: 0px;
 }
 
-.nav i{
-    font-size: px;
-}
+
 .nav>:first-child{
 text-decoration: none;
 color: #fff;
@@ -72,6 +70,12 @@ display: none;
  width: 20px;
 }
 
+@media screen and (max-width:800px) {
+.ul li A{
+    font-size: 1.2rem;
+}
+}
+
 @media screen and (max-width:768px) {
   .nav{
     box-shadow: unset;
@@ -109,7 +113,9 @@ display: none;
     }
 
 
-
+    .ul li A{
+        font-size: 1.3rem;
+    }
 
 
 

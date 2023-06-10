@@ -2,7 +2,7 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
 import styles from "../css/githubstats.module.css"
-
+import {IoReloadSharp} from "react-icons/io5"
 const Calender = () => {
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
@@ -25,11 +25,12 @@ if(  date.getFullYear() === currentYear ){
     // #16253a 
     <div style={{background:"#1b2430",padding:"50px 0px"}}>
 
-
+<span className={styles.reload} onClick={()=>{window.location.reload()}}><IoReloadSharp/></span>
 
 
         <div className={styles.gitStats}>
                <h1 style={{ color:"#fff"}}>My Github Statistics</h1>
+              
               <div>
                   <div>
                 <img src="https://github-readme-streak-stats.herokuapp.com/?user=gk072745&theme=radical&hide_border=false" alt="" />

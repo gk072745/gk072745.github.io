@@ -67,12 +67,15 @@ cursor: default;
 .tech{
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
     gap: 10px;
     justify-content: center;
-
+    font-size:40px;
+    color:#558181;
 }
-
+.tech>*:hover{
+    color:#1b8989
+}
 .show{
     display: flex;
     gap: 50px;
@@ -98,8 +101,12 @@ cursor: default;
 }
 
 
-
 @media only screen and (max-width: 1000px) and (min-width: 770px){
+    .tech{
+        font-size: 35px;
+    }
+
+
     .Projects>div>div>p{
  
         font-size: 16px;
@@ -107,6 +114,7 @@ cursor: default;
     .Projects{
         padding:20px 0px;
     }
+    
 }
 
 @media only screen and (max-width: 769px){
@@ -115,7 +123,7 @@ cursor: default;
         grid-template-columns: repeat(1,1fr);
         padding:20px 50px;
     }
-
+    
 } 
 
 @media only screen and (max-width: 700px){
@@ -142,6 +150,7 @@ cursor: default;
     font-size: 16px;
     padding: 4px 10px;
 }
+
 }
 
 
@@ -159,7 +168,7 @@ cursor: default;
         width: 50px;
     }
     
-   
+    
     
     .show a{
         font-size: 14px;
@@ -174,9 +183,7 @@ cursor: default;
     .Projects>div{
         padding: 20px 25px;
     }
-   .tech{
-    padding: 10px;
-   }
+   
 
    .show{
     padding: 10px;
@@ -197,9 +204,7 @@ cursor: default;
 .Projects>div>div>p{
     font-size: 12px;
 }
-.tech{
-    gap: 0px;
-}
+
 .tech img{
     width: 60px;
     height: 20px;
@@ -209,10 +214,16 @@ cursor: default;
     font-size: 12px;
     padding: 1px 5px;
 }
+.tech>*{
+    font-size: 30px;
+}
 }
 
 
 @media only screen and (max-width: 350px){
+
+    
+
     .Projects h2 ,.Projects h3{
         font-size: 14px;
     }

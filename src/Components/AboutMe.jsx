@@ -2,7 +2,6 @@ import styles from "../css/AboutMe.module.css"
 import Typewriter from 'typewriter-effect';
 
 
-
 export const AboutMe=()=>{
     
    return (
@@ -11,6 +10,7 @@ export const AboutMe=()=>{
                  <div className={styles.profile}>
                          <div>
                          <img src={process.env.PUBLIC_URL + "/Govind-Kumawat-Profile.png"} alt="" />
+                         {/* <img src={process.env.PUBLIC_URL + "/1.png"} alt="" /> */}
                          
                          </div>
                  </div>
@@ -27,13 +27,13 @@ export const AboutMe=()=>{
                        />
                         </h2>
                         <p>
-I am an enthusiastic Developer who loves to solve real world problems with awesome people. I take a collaborative, creative & strategic approach to solving problems. I have completed Full Stack Developent <b>Full Time</b>  course in Masai School. 
+I am Govind Kumawat from Rajasthan. I enjoy coding in javacript, React. Dedicated 1200+ hours of learning HTML, CSS, JavaScript, React, React-Redux, and Chakra-UI. Looking to start work in a fast-paced environment and playing a vital role in the company's growth.
                         </p>
 
                     </div>
                     <div className={styles.resumeDiv}>
-                    <a href={"https://drive.google.com/uc?export=download&id=1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM"}className={styles.resume}  download={true} 
-                          onClick={()=>window.open("https://drive.google.com/file/d/1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM/view?usp=sharing") }>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
+                    <a style={{cursor:"pointer"}} href={"https://drive.google.com/uc?export=download&id=1H2MuS3Z2SmTh1Ag1K2E8Y4QWp_pjTUNn"}className={styles.resume}  download={true} 
+                          onClick={()=>window.open("https://drive.google.com/file/d/1H2MuS3Z2SmTh1Ag1K2E8Y4QWp_pjTUNn/view?usp=sharing") }>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
 
                     </div>
                  </div>

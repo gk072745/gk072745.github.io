@@ -5,8 +5,7 @@ export const Contact = () => {
   return (
     <div id='Contact' className={styles.main}>
          <h1>Contact me</h1>
-           <div className={styles.sections}>
-       
+           <div className={styles.sections}>   
     <div> 
       <h2>Get in Touch</h2>
        <div className={styles.touch}>
@@ -17,20 +16,20 @@ export const Contact = () => {
           </div>
           <div>
           <i className="fa fa-phone" aria-hidden="true"></i>
-          <a href="tel:+919461686381">+91 9461686381</a>
+          <a href="tel:+919461686381"  target={"_blank"}>+91 9461686381</a>
           </div>
           <div>
 
           <i className='fab fa-linkedin-square'></i>
-          <a href="https://www.linkedin.com/in/gk072745/">linkedin</a>
+          <a href="https://www.linkedin.com/in/gk072745/" target={"_blank"}>linkedin</a>
           </div>
           <div>
             <i className="fa-brands fa-github"></i>
-            <a href="https://github.com/gk072745">Github</a>
+            <a href="https://github.com/gk072745"  target={"_blank"}>Github</a>
           </div>
           
-            <a href={"https://drive.google.com/uc?export=download&id=1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM"}className={styles.resume}  download={true} 
-                          onClick={()=>window.open("https://drive.google.com/file/d/1G9bFkhbWTWgC5PLtcTzIg_ThDiY8JPWM/view?usp=sharing") }>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
+          <a style={{cursor:"pointer"}} href={"https://drive.google.com/uc?export=download&id=1H2MuS3Z2SmTh1Ag1K2E8Y4QWp_pjTUNn"}className={styles.resume}  download={true} 
+                          onClick={()=>window.open("https://drive.google.com/file/d/1H2MuS3Z2SmTh1Ag1K2E8Y4QWp_pjTUNn/view?usp=sharing") }>Resume <i className="fa fa-download" aria-hidden="true"></i></a>
           
       </div>
     </div>
