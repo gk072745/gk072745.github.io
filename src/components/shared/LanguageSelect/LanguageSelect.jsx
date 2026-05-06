@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { cn } from '../../../helpers/animation'
@@ -19,6 +20,7 @@ function LanguageSelect({
   const rootRef = useRef(null)
   const triggerRef = useRef(null)
   const optionRefs = useRef([])
+  const panelRef = useRef(null)
 
   const [open, setOpen] = useState(false)
   const [focusedIndex, setFocusedIndex] = useState(() =>
@@ -58,10 +60,32 @@ function LanguageSelect({
     return () => window.cancelAnimationFrame(t)
   }, [open, focusedIndex])
 
+  const [panelStyle, setPanelStyle] = useState(null)
+
+  const updatePanelPosition = useCallback(() => {
+    const trigger = triggerRef.current
+    if (!trigger) return
+    const rect = trigger.getBoundingClientRect()
+    setPanelStyle({
+      position: 'fixed',
+      left: rect.left,
+      top: rect.bottom + 4,
+      width: rect.width,
+      zIndex: 260,
+    })
+  }, [])
+
+  useLayoutEffect(() => {
+    if (!open) return
+    updatePanelPosition()
+  }, [open, updatePanelPosition])
+
   useEffect(() => {
     if (!open) return
     function onPointerDown(event) {
-      if (rootRef.current && !rootRef.current.contains(event.target)) {
+      const inRoot = rootRef.current?.contains(event.target)
+      const inPanel = panelRef.current?.contains(event.target)
+      if (!inRoot && !inPanel) {
         setOpen(false)
       }
     }
@@ -73,11 +97,15 @@ function LanguageSelect({
     }
     document.addEventListener('mousedown', onPointerDown)
     document.addEventListener('keydown', onKey)
+    window.addEventListener('scroll', updatePanelPosition, true)
+    window.addEventListener('resize', updatePanelPosition)
     return () => {
       document.removeEventListener('mousedown', onPointerDown)
       document.removeEventListener('keydown', onKey)
+      window.removeEventListener('scroll', updatePanelPosition, true)
+      window.removeEventListener('resize', updatePanelPosition)
     }
-  }, [open, close])
+  }, [open, close, updatePanelPosition])
 
   const moveFocus = useCallback(
     (delta) => {
@@ -141,6 +169,61 @@ function LanguageSelect({
     }
   }
 
+  const panel = useMemo(() => {
+    if (!open || !panelStyle) return null
+    return (
+      <ul
+        ref={panelRef}
+        id={listId}
+        role="listbox"
+        tabIndex={-1}
+        onKeyDownCapture={onListKeyDown}
+        style={panelStyle}
+        className="scrollbar-accent flex max-h-60 flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg border border-violet-500/40 bg-white p-1 pr-0.5 shadow-lg shadow-zinc-900/10 ring-1 ring-violet-500/10 dark:border-violet-400/35 dark:bg-zinc-950 dark:shadow-black/40 dark:ring-violet-400/10"
+      >
+        {options.map((opt, index) => {
+          const isSelected = value === opt.code
+          const isFocused = index === focusedIndex
+          return (
+            <li
+              key={opt.code}
+              id={`${listId}-opt-${opt.code}`}
+              role="option"
+              aria-selected={isSelected}
+              tabIndex={isFocused ? 0 : -1}
+              ref={(el) => {
+                optionRefs.current[index] = el
+              }}
+              className={cn(
+                'flex min-h-11 cursor-pointer items-center rounded-md px-1.5 py-0.5 text-sm leading-snug outline-none transition-colors',
+                isSelected &&
+                  cn(
+                    'font-medium text-violet-900 dark:text-violet-100',
+                    isFocused ? 'bg-violet-300/95 dark:bg-violet-700/65' : 'bg-violet-200/80 dark:bg-violet-900/60'
+                  ),
+                !isSelected &&
+                  cn(
+                    'text-zinc-800 dark:text-zinc-100',
+                    isFocused && 'bg-zinc-200 dark:bg-zinc-700'
+                  )
+              )}
+              onMouseEnter={() => setFocusedIndex(index)}
+              onClick={() => selectAt(index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  selectAt(index)
+                }
+              }}
+            >
+              {opt.label}
+            </li>
+          )
+        })}
+      </ul>
+    )
+  }, [focusedIndex, listId, onListKeyDown, open, options, panelStyle, selectAt, value])
+
   return (
     <div ref={rootRef} className={cn('relative', className)}>
       <button
@@ -177,57 +260,7 @@ function LanguageSelect({
         />
       </button>
 
-      {open ? (
-        <ul
-          id={listId}
-          role="listbox"
-          tabIndex={-1}
-          onKeyDownCapture={onListKeyDown}
-          className="scrollbar-accent absolute left-0 right-0 top-[calc(100%+0.25rem)] z-[210] flex max-h-60 flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg border border-violet-500/40 bg-white p-1 pr-0.5 shadow-lg shadow-zinc-900/10 ring-1 ring-violet-500/10 dark:border-violet-400/35 dark:bg-zinc-950 dark:shadow-black/40 dark:ring-violet-400/10"
-        >
-          {options.map((opt, index) => {
-            const isSelected = value === opt.code
-            const isFocused = index === focusedIndex
-            return (
-              <li
-                key={opt.code}
-                id={`${listId}-opt-${opt.code}`}
-                role="option"
-                aria-selected={isSelected}
-                tabIndex={isFocused ? 0 : -1}
-                ref={(el) => {
-                  optionRefs.current[index] = el
-                }}
-                className={cn(
-                  'flex min-h-11 cursor-pointer items-center rounded-md px-1.5 py-0.5 text-sm leading-snug outline-none transition-colors',
-                  isSelected &&
-                    cn(
-                      'font-medium text-violet-900 dark:text-violet-100',
-                      isFocused
-                        ? 'bg-violet-300/95 dark:bg-violet-700/65'
-                        : 'bg-violet-200/80 dark:bg-violet-900/60'
-                    ),
-                  !isSelected &&
-                    cn(
-                      'text-zinc-800 dark:text-zinc-100',
-                      isFocused && 'bg-zinc-200 dark:bg-zinc-700'
-                    )
-                )}
-                onMouseEnter={() => setFocusedIndex(index)}
-                onClick={() => selectAt(index)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    selectAt(index)
-                  }
-                }}
-              >
-                {opt.label}
-              </li>
-            )
-          })}
-        </ul>
-      ) : null}
+      {panel ? createPortal(panel, document.body) : null}
     </div>
   )
 }

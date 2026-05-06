@@ -182,6 +182,8 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Fix Language dropdown cropping: listbox now renders in a `document.body` portal with fixed positioning (not clipped by header effects) |
+| 2026-05-06 | Navbar responsive fix: desktop full nav + mobile hamburger menu panel with 44px touch targets and close-on-link-click behavior |
 | 2026-05-06 | QuickDock PiP layout tightened: smaller PiP window, removed close/extra buttons inside PiP, and made Resume CTA full-width |
 | 2026-05-06 | QuickDock PiP UX: removed explicit “enable” button; silently primes PiP on first user interaction, then shows mini-window automatically on tab switch |
 | 2026-05-06 | QuickDock upgrade: optional Document Picture-in-Picture mini-window (Meet-style) that shows the open card when user switches browser tabs |
