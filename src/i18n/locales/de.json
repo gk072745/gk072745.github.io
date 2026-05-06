@@ -52,5 +52,11 @@
       "databases": "Datenbanken",
       "tools": "Tools"
     }
+  },
+  "education": {
+    "kicker": "Akademische Basis",
+    "title": "Ausbildung",
+    "listHeading": "Abschlüsse",
+    "noteLabel": "Relevante Kurse"
   }
 }

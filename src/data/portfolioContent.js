@@ -100,16 +100,20 @@ export const portfolioContent = {
     tools: ['Git', 'GitHub Actions', 'Docker', 'Postman'],
   },
 
-  education: [
-    {
-      id: 'edu-1',
-      degree: 'Bachelor of Technology (Dummy)',
-      school: 'Dummy Institute of Technology',
-      start: '2018',
-      end: '2022',
-      note: 'Relevant coursework: DSA, DBMS, Operating Systems, CN',
-    },
-  ],
+  education: {
+    summary:
+      'Dummy: Formal foundation in computer science fundamentals applied to practical software delivery and system thinking.',
+    items: [
+      {
+        id: 'edu-1',
+        degree: 'Bachelor of Technology (Dummy)',
+        school: 'Dummy Institute of Technology',
+        start: '2018',
+        end: '2022',
+        note: 'Relevant coursework: DSA, DBMS, Operating Systems, CN',
+      },
+    ],
+  },
 
   certifications: [
     {

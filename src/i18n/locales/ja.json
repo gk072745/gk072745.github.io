@@ -52,5 +52,11 @@
       "databases": "データベース",
       "tools": "ツール"
     }
+  },
+  "education": {
+    "kicker": "学術基盤",
+    "title": "学歴",
+    "listHeading": "学位",
+    "noteLabel": "関連科目"
   }
 }

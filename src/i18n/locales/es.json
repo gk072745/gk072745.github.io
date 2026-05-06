@@ -52,5 +52,11 @@
       "databases": "Bases de datos",
       "tools": "Herramientas"
     }
+  },
+  "education": {
+    "kicker": "Base académica",
+    "title": "Educación",
+    "listHeading": "Titulaciones",
+    "noteLabel": "Cursos relevantes"
   }
 }

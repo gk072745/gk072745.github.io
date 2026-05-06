@@ -52,5 +52,11 @@
       "databases": "数据库",
       "tools": "工具"
     }
+  },
+  "education": {
+    "kicker": "学术基础",
+    "title": "教育",
+    "listHeading": "学历",
+    "noteLabel": "相关课程"
   }
 }

@@ -52,5 +52,11 @@
       "databases": "Bases de données",
       "tools": "Outils"
     }
+  },
+  "education": {
+    "kicker": "Fondation académique",
+    "title": "Formation",
+    "listHeading": "Diplômes",
+    "noteLabel": "Cours pertinents"
   }
 }

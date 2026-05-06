@@ -1,6 +1,7 @@
 import React from 'react'
 
 import About from '../components/About/About'
+import Education from '../components/Education/Education'
 import Experience from '../components/Experience/Experience'
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
@@ -14,6 +15,7 @@ function Home() {
       <Experience />
       <Projects />
       <Skills />
+      <Education />
     </main>
   )
 }

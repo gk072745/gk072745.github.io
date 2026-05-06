@@ -52,5 +52,11 @@
       "databases": "Database",
       "tools": "Strumenti"
     }
+  },
+  "education": {
+    "kicker": "Base accademica",
+    "title": "Formazione",
+    "listHeading": "Titoli di studio",
+    "noteLabel": "Corsi rilevanti"
   }
 }

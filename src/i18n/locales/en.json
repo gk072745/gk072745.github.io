@@ -52,5 +52,11 @@
       "databases": "Databases",
       "tools": "Tools"
     }
+  },
+  "education": {
+    "kicker": "Academic foundation",
+    "title": "Education",
+    "listHeading": "Degrees",
+    "noteLabel": "Relevant coursework"
   }
 }

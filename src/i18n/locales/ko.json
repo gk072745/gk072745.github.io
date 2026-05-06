@@ -52,5 +52,11 @@
       "databases": "데이터베이스",
       "tools": "도구"
     }
+  },
+  "education": {
+    "kicker": "학업 기반",
+    "title": "학력",
+    "listHeading": "학위",
+    "noteLabel": "관련 과목"
   }
 }

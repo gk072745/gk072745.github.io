@@ -52,5 +52,11 @@
       "databases": "Bancos de dados",
       "tools": "Ferramentas"
     }
+  },
+  "education": {
+    "kicker": "Base acadêmica",
+    "title": "Educação",
+    "listHeading": "Formações",
+    "noteLabel": "Disciplinas relevantes"
   }
 }

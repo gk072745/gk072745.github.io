@@ -52,5 +52,11 @@
       "databases": "डेटाबेस",
       "tools": "टूल्स"
     }
+  },
+  "education": {
+    "kicker": "शैक्षणिक आधार",
+    "title": "शिक्षा",
+    "listHeading": "डिग्रियां",
+    "noteLabel": "प्रासंगिक पाठ्यक्रम"
   }
 }
