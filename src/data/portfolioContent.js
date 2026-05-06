@@ -137,9 +137,15 @@ export const portfolioContent = {
   },
 
   contact: {
+    summary:
+      'Dummy: Prefer email for opportunities, consulting, and collaboration. This form can deliver messages directly to your inbox using a free Web3Forms key.',
+    formEndpoint: 'https://api.web3forms.com/submit',
+    formAccessKey: '',
+    defaultSubject: 'Portfolio inquiry',
     email: 'your.email@example.com',
     phone: '+91-90000-00000',
     location: 'India',
+    note: 'You can also mail directly if the form is not available on your device.',
     socials: {
       github: 'https://github.com/your-username',
       linkedin: 'https://www.linkedin.com/in/your-linkedin',

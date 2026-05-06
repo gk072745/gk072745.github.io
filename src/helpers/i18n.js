@@ -4,14 +4,6 @@
 export const SUPPORTED_LANGUAGE_CODES = [
   'en',
   'hi',
-  'ja',
-  'de',
-  'fr',
-  'es',
-  'pt',
-  'it',
-  'ko',
-  'zh',
 ]
 
 export const FALLBACK_LANGUAGE = 'en'
@@ -22,14 +14,6 @@ export const STORAGE_KEY_LANGUAGE = 'portfolio_language'
 export const LANGUAGE_NATIVE_LABELS = {
   en: 'English',
   hi: 'हिंदी',
-  ja: '日本語',
-  de: 'Deutsch',
-  fr: 'Français',
-  es: 'Español',
-  pt: 'Português',
-  it: 'Italiano',
-  ko: '한국어',
-  zh: '简体中文',
 }
 
 export function normalizeLanguageCode(code) {

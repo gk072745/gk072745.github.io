@@ -19,7 +19,7 @@ A modern, fully responsive portfolio targeting senior/high-impact engineering ro
 | Styling     | Tailwind CSS v4 (`@tailwindcss/vite`), global `src/index.css` |
 | Routing     | React Router v7 (`createBrowserRouter` + `RouterProvider`) |
 | Icons       | React Icons                       |
-| i18n        | i18next, react-i18next, LanguageDetector (`en`, `hi`, `ja`, `de`, `fr`, `es`, `pt`, `it`, `ko`, `zh`) |
+| i18n        | i18next, react-i18next, LanguageDetector (`en`, `hi`) |
 | Deployment  | GitHub Pages via `gh-pages`       |
 
 ---
@@ -42,6 +42,7 @@ gk072745.github.io/
 │   │   ├── Skills/          # Skills section (#skills)
 │   │   ├── Education/       # Education section (#education)
 │   │   ├── Certifications/  # Certifications section (#certifications)
+│   │   ├── Contact/         # Contact section (#contact)
 │   │   └── shared/          # Shared primitives (`SectionContainer`, `LanguageSelect`, …)
 │   ├── data/
 │   │   └── portfolioContent.js   # Section roadmap + placeholder copy
@@ -85,7 +86,7 @@ gk072745.github.io/
 
 | Item | Detail |
 |------|--------|
-| Locale files | `src/i18n/locales/{code}.json` — mirrored keys across all locales. |
+| Locale files | `src/i18n/locales/{code}.json` — mirrored keys across `en` and `hi`. |
 | Detection | Stored under `portfolio_language`, browser language fallback, synced `document.documentElement.lang`. |
 | Switching UI | Implemented in [`src/App.jsx`](src/App.jsx) (root layout) with native labels curated in [`src/helpers/i18n.js`](src/helpers/i18n.js). |
 | Adding languages | Duplicate JSON skeleton, extend `SUPPORTED_LANGUAGE_CODES`, update picker labels & sync mapping in `helpers/i18n.js`. |
@@ -181,6 +182,10 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Header nav added with anchor links for section-wise smooth scrolling; i18n reduced to English + Hindi only (locale files/config trimmed) |
+| 2026-05-06 | Contact form switched from `mailto:` draft to direct Web3Forms API submission (with loading/success/error states) |
+| 2026-05-06 | Contact details expanded: direct clickable Email, Mobile (`tel:`), GitHub, and LinkedIn links in Contact aside |
+| 2026-05-06 | **Contact** section (`#contact`): email + message form, direct-email card, and i18n keys across locales |
 | 2026-05-06 | **Certifications** section (`#certifications`): responsive cards with issuer/year, credential link CTA + i18n; `portfolioContent.certifications` → `{ summary, items }` |
 | 2026-05-06 | **Education** section (`#education`): degree timeline card, school/date row, coursework note label + i18n; `portfolioContent.education` → `{ summary, items }` |
 | 2026-05-06 | Projects card layout fix: add visible gap between tech chips and CTA divider (`mt-5` before border) |

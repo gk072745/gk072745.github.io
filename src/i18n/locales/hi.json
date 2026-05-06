@@ -6,7 +6,14 @@
     "toggleTheme": "थीम बदलें"
   },
   "nav": {
-    "home": "होम"
+    "home": "होम",
+    "about": "परिचय",
+    "experience": "अनुभव",
+    "projects": "प्रोजेक्ट्स",
+    "skills": "स्किल्स",
+    "education": "शिक्षा",
+    "certifications": "प्रमाणपत्र",
+    "contact": "संपर्क"
   },
   "hero": {
     "badge": "अवसरों के लिए खुला",
@@ -63,5 +70,20 @@
     "kicker": "प्रमाणित विशेषज्ञता",
     "title": "प्रमाणपत्र",
     "viewCredential": "क्रेडेंशियल देखें"
+  },
+  "contact": {
+    "kicker": "चलो जुड़ें",
+    "title": "संपर्क",
+    "formTitle": "सीधे ईमेल भेजें",
+    "emailLabel": "आपका ईमेल",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "संदेश",
+    "messagePlaceholder": "रोल, प्रोजेक्ट या सहयोग के बारे में लिखें।",
+    "sendingButton": "भेजा जा रहा है...",
+    "sendButton": "संदेश भेजें",
+    "directTitle": "सीधा ईमेल",
+    "successMessage": "संदेश सफलतापूर्वक भेजा गया।",
+    "errorMessage": "अभी संदेश नहीं भेजा जा सका। कृपया फिर प्रयास करें।",
+    "errorConfigMissing": "फॉर्म इंटीग्रेशन key नहीं मिला। portfolio content में अपना Web3Forms access key जोड़ें।"
   }
 }

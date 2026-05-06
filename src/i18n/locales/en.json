@@ -6,7 +6,14 @@
     "toggleTheme": "Toggle theme"
   },
   "nav": {
-    "home": "Home"
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact"
   },
   "hero": {
     "badge": "Open to opportunities",
@@ -63,5 +70,20 @@
     "kicker": "Proof of depth",
     "title": "Certifications",
     "viewCredential": "View credential"
+  },
+  "contact": {
+    "kicker": "Let's connect",
+    "title": "Contact",
+    "formTitle": "Send an email directly",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about the role, project, or collaboration.",
+    "sendingButton": "Sending...",
+    "sendButton": "Send message",
+    "directTitle": "Direct email",
+    "successMessage": "Message sent successfully.",
+    "errorMessage": "Unable to send message right now. Please try again.",
+    "errorConfigMissing": "Form integration key is missing. Add your Web3Forms access key in portfolio content."
   }
 }
