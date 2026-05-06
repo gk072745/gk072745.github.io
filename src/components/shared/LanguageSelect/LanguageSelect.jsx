@@ -163,7 +163,7 @@ function LanguageSelect({
         }}
         onKeyDown={onTriggerKeyDown}
         className={cn(
-          'inline-flex min-h-11 w-full min-w-[7rem] flex-1 items-center justify-between gap-2 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-left text-sm text-zinc-900 transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:hover:bg-zinc-800 sm:flex-initial',
+          'inline-flex min-h-11 w-full min-w-[7rem] flex-1 cursor-pointer items-center justify-between gap-2 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-left text-sm text-zinc-900 transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:hover:bg-zinc-800 sm:flex-initial',
           open && 'bg-violet-100 dark:bg-violet-950/55'
         )}
       >

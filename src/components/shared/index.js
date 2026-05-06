@@ -2,3 +2,4 @@ export { default as HighlightCheckRow } from './HighlightCheckRow/HighlightCheck
 export { default as LanguageSelect } from './LanguageSelect/LanguageSelect'
 export { default as TechPill } from './TechPill/TechPill'
 export { default as SectionContainer } from './SectionContainer/SectionContainer'
+export { default as QuickDock } from './QuickDock/QuickDock'

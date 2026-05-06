@@ -182,6 +182,19 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | QuickDock PiP layout tightened: smaller PiP window, removed close/extra buttons inside PiP, and made Resume CTA full-width |
+| 2026-05-06 | QuickDock PiP UX: removed explicit “enable” button; silently primes PiP on first user interaction, then shows mini-window automatically on tab switch |
+| 2026-05-06 | QuickDock upgrade: optional Document Picture-in-Picture mini-window (Meet-style) that shows the open card when user switches browser tabs |
+| 2026-05-06 | QuickDock behavior tweak: closed by default; opens only on user click (still syncs open/close across tabs) |
+| 2026-05-06 | Added Meet-style floating `QuickDock`: auto-shows when returning to tab, syncs open/close across tabs, includes resume download + quick navigation |
+| 2026-05-06 | Section popout spacing tweak: added vertical gap before/after each hovered block so glow/shadow doesn’t touch section divider borders |
+| 2026-05-06 | Added reusable `section-popout` depth effect in `SectionContainer` (subtle lift/glow on hover) for premium section presence |
+| 2026-05-06 | Navbar update: added `Home` tab linking to `#hero` for quick return to page start |
+| 2026-05-06 | Header effect scope update: magnetic pointer glow moved from nav-only to full header wrapper; nav links cleaned to simple text-hover style |
+| 2026-05-06 | Navbar simplified: removed item-level box styling, made links evenly visible across full bar, and kept magnet gradient as whole-bar effect |
+| 2026-05-06 | Navbar tweak: removed horizontal nav scrollbar and scoped magnetic effect to whole nav container only (no per-link pull) |
+| 2026-05-06 | Navbar magnetic polish: stronger pointer-follow gradient spotlight with link pull/parallax toward cursor + richer hover treatment |
+| 2026-05-06 | Navbar UX refresh: aligned section links + controls, animated hover backgrounds/underline for nav links, and mouse-follow glow effect in nav container |
 | 2026-05-06 | Header nav added with anchor links for section-wise smooth scrolling; i18n reduced to English + Hindi only (locale files/config trimmed) |
 | 2026-05-06 | Contact form switched from `mailto:` draft to direct Web3Forms API submission (with loading/success/error states) |
 | 2026-05-06 | Contact details expanded: direct clickable Email, Mobile (`tel:`), GitHub, and LinkedIn links in Contact aside |

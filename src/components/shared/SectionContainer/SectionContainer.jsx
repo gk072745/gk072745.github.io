@@ -31,6 +31,7 @@ function SectionContainer({
   narrow = false,
   animateChildren = false,
   animationVariant = 'fade-up',
+  popout = true,
   ...rest
 }) {
   const motionClass = animateChildren
@@ -46,6 +47,7 @@ function SectionContainer({
       <div
         className={cn(
           'mx-auto w-full',
+          popout && 'section-popout',
           innerWidth(narrow),
           padders(padded),
           motionClass,
