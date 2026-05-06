@@ -1,0 +1,39 @@
+// Typography
+$font-primary: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+// Colors — will be updated when design is decided
+$color-bg:        #0d0d0d;
+$color-bg-alt:    #141414;
+$color-text:      #e8e8e8;
+$color-text-muted:#9a9a9a;
+$color-accent:    #6c63ff;
+$color-accent-alt:#a78bfa;
+$color-border:    #2a2a2a;
+
+// Spacing scale
+$space-xs:   4px;
+$space-sm:   8px;
+$space-md:  16px;
+$space-lg:  32px;
+$space-xl:  64px;
+$space-xxl: 96px;
+
+// Breakpoints
+$bp-sm:   480px;
+$bp-md:   768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+$bp-xxl: 1600px;
+
+// Mixins
+@mixin respond($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin respond-min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
