@@ -26,5 +26,12 @@
     "highlights": "亮点",
     "focusEyebrow": "工作方式",
     "focusBody": "占位：清晰的职责归属、快速的反馈闭环与增量交付 — 从需求探索到上线与打磨。"
+  },
+  "experience": {
+    "kicker": "履历",
+    "title": "工作经历",
+    "listHeading": "近期岗位",
+    "asideEyebrow": "技术栈概览",
+    "techStackLabel": "技术栈"
   }
 }

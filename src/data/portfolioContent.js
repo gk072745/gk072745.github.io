@@ -26,36 +26,42 @@ export const portfolioContent = {
     ],
   },
 
-  experience: [
-    {
-      id: 'exp-1',
-      company: 'Dummy Tech Solutions',
-      role: 'Software Engineer',
-      start: 'Jan 2024',
-      end: 'Present',
-      location: 'Remote',
-      points: [
-        'Built modular frontend architecture for a SaaS dashboard.',
-        'Improved page speed by reducing bundle and render cost.',
-        'Collaborated with product/design to ship features every sprint.',
-      ],
-      tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    },
-    {
-      id: 'exp-2',
-      company: 'Dummy Labs',
-      role: 'Frontend Developer',
-      start: 'Jul 2022',
-      end: 'Dec 2023',
-      location: 'Onsite',
-      points: [
-        'Created reusable UI component system and design tokens.',
-        'Integrated APIs and handled loading/error states consistently.',
-        'Set up CI checks for lint/build quality gates.',
-      ],
-      tech: ['React', 'SCSS', 'REST API', 'GitHub Actions'],
-    },
-  ],
+  experience: {
+    summary:
+      'Dummy: Recent roles centered on scalable web interfaces, pragmatic architecture, and shipping with measurable quality.',
+    asideBody:
+      'Dummy: Comfortable across React-focused frontends, Node services, relational data models, CI checks, and close collaboration with product and design.',
+    roles: [
+      {
+        id: 'exp-1',
+        company: 'Dummy Tech Solutions',
+        role: 'Software Engineer',
+        start: 'Jan 2024',
+        end: 'Present',
+        location: 'Remote',
+        points: [
+          'Built modular frontend architecture for a SaaS dashboard.',
+          'Improved page speed by reducing bundle and render cost.',
+          'Collaborated with product/design to ship features every sprint.',
+        ],
+        tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+      },
+      {
+        id: 'exp-2',
+        company: 'Dummy Labs',
+        role: 'Frontend Developer',
+        start: 'Jul 2022',
+        end: 'Dec 2023',
+        location: 'Onsite',
+        points: [
+          'Created reusable UI component system and design tokens.',
+          'Integrated APIs and handled loading/error states consistently.',
+          'Set up CI checks for lint/build quality gates.',
+        ],
+        tech: ['React', 'SCSS', 'REST API', 'GitHub Actions'],
+      },
+    ],
+  },
 
   projects: [
     {

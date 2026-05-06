@@ -26,5 +26,12 @@
     "highlights": "Points forts",
     "focusEyebrow": "Façon de travailler",
     "focusBody": "Dummy: responsabilités claires, boucles de feedback rapides et livraison incrémentale — de la découverte jusqu’au déploiement et au polish."
+  },
+  "experience": {
+    "kicker": "Parcours",
+    "title": "Expérience",
+    "listHeading": "Rôles récents",
+    "asideEyebrow": "Aperçu stack",
+    "techStackLabel": "Stack technique"
   }
 }

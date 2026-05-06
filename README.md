@@ -37,12 +37,16 @@ gk072745.github.io/
 │   ├── components/
 │   │   ├── Hero/            # Hero section (landing)
 │   │   ├── About/           # About section (#about)
-│   │   └── shared/          # Shared primitives (`SectionContainer`, etc.)
+│   │   ├── Experience/      # Experience section (#experience)
+│   │   └── shared/          # Shared primitives (`SectionContainer`, `LanguageSelect`, …)
 │   ├── data/
 │   │   └── portfolioContent.js   # Section roadmap + placeholder copy
 │   ├── helpers/
-│   │   ├── animation.js      # `cn()` for class names
-│   │   └── i18n.js           # locales list, normalization, picker labels
+│   │   ├── animation.js        # `cn()` for class names
+│   │   ├── i18n.js             # locales list, normalization, picker labels
+│   │   ├── svgicons.js        # theme-tintable tech SVGs (`currentColor`, built from `_techPaths.json`)
+│   │   ├── _techPaths.json     # path `d` strings (regenerate: `node scripts/extract-si-paths.mjs`)
+│   │   └── resolveTechVisual.js  # label → `{ Icon, iconClassName }` for `TechPill`
 │   ├── hooks/
 │   │   ├── useLocale.js      # language change + synced <html lang>
 │   │   └── useTheme.js       # persisted light/dark (`html.dark` + `data-theme`)
@@ -69,6 +73,7 @@ gk072745.github.io/
 | Global CSS | `src/index.css` — Tailwind import, `@layer base` for `body`, shared `@keyframes` for section motion |
 | Dark mode | `html` class `dark` toggled in `useTheme`; use `dark:` variants in components |
 | Motion | Prefer `motion-safe:` / `motion-reduce:` patterns consistent with `SectionContainer` |
+| Tech icons | Use `src/helpers/svgicons.js` (+ `resolveTechVisual`); colour only via Tailwind on the SVG (`text-violet-400`, etc.) — paths are MIT Simple Icons data in `_techPaths.json` |
 
 ---
 
@@ -172,6 +177,12 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Experience: tighten vertical gap between highlights and tech stack (`pt-3` only, no extra `mt-*`) |
+| 2026-05-06 | Experience: “Tech stack” label + i18n; subtler separator above chips; `gap-3` between pills; role `pb-8` before next-entry divider (`last:pb-0`) |
+| 2026-05-06 | Tech icons: `TECH_ICON_TINT` = `text-violet-700 dark:text-violet-400` (violet-only, no fuchsia); React 32×32 atom path (`currentColor`); `TechPill` full-opacity icons |
+| 2026-05-06 | Tech stacks: `svgicons.js` + `_techPaths.json` (Simple Icons paths, `currentColor`); `TechPill` normalizes icon box so mixed glyphs align |
+| 2026-05-06 | Experience tech pills: themed SVG icons (`resolveTechVisual` + `TechPill`) with inset-ring edge + shared height; slight check icon nudge in `HighlightCheckRow` |
+| 2026-05-06 | Highlights / experience bullets: `HighlightCheckRow` + `lh` alignment; new **Experience** section (`#experience`) mirroring About’s two-card layout + i18n |
 | 2026-05-06 | Language dropdown: custom `.scrollbar-accent` (thin violet thumb + track) for Firefox + WebKit |
 | 2026-05-06 | Replace native language `<select>` with accessible custom `LanguageSelect` listbox (themed panel, keyboard + click outside) |
 | 2026-05-06 | Migrate styling from SCSS to Tailwind v4; remove Sass partials/CSS modules and empty `styles/` folder; docs + Cursor rules/commands updated |

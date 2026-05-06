@@ -26,5 +26,12 @@
     "highlights": "ハイライト",
     "focusEyebrow": "ワークスタイル",
     "focusBody": "ダミー: 明確なオーナーシップと迅速なフィードバック、段階的なリリース — 調査から展開・磨き込みまで。"
+  },
+  "experience": {
+    "kicker": "キャリア",
+    "title": "職歴",
+    "listHeading": "直近の役割",
+    "asideEyebrow": "スタック概要",
+    "techStackLabel": "技術スタック"
   }
 }

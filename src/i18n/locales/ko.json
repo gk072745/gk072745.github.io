@@ -26,5 +26,12 @@
     "highlights": "하이라이트",
     "focusEyebrow": "업무 스타일",
     "focusBody": "더미: 명확한 오너십과 빠른 피드백 루프, 단계적 출시 — 탐색부터 롤아웃과 마무리까지."
+  },
+  "experience": {
+    "kicker": "경력",
+    "title": "경험",
+    "listHeading": "최근 역할",
+    "asideEyebrow": "스택 스냅샷",
+    "techStackLabel": "기술 스택"
   }
 }

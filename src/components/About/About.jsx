@@ -1,10 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { HiOutlineCheckCircle } from 'react-icons/hi2'
-
 import { portfolioContent } from '../../data/portfolioContent'
-import { SectionContainer } from '../shared'
-import { cn } from '../../helpers/animation'
+import { HighlightCheckRow, SectionContainer } from '../shared'
 
 function About() {
   const { t } = useTranslation()
@@ -43,27 +40,15 @@ function About() {
           </h3>
           <ul className="grid gap-0" aria-label={t('about.highlights')}>
             {about.highlights.map((item, index) => (
-              <li
-                key={index}
-                className={cn(
-                  'grid grid-cols-[auto_1fr] gap-4 border-b border-zinc-200 py-4 last:border-0 dark:border-zinc-700/75',
-                  'items-start text-base leading-relaxed text-zinc-800 dark:text-zinc-100'
-                )}
-              >
-                <span className="text-violet-600 dark:text-violet-400" aria-hidden="true">
-                  <HiOutlineCheckCircle className="text-xl" />
-                </span>
-                <span lang="en">{item}</span>
-              </li>
+              <HighlightCheckRow key={index} lang="en">
+                {item}
+              </HighlightCheckRow>
             ))}
           </ul>
         </div>
 
         <div
-          className={cn(
-            'rounded-2xl border border-dashed border-violet-400/30 p-8',
-            'bg-gradient-to-b from-violet-500/10 to-transparent dark:from-violet-500/15'
-          )}
+          className="rounded-2xl border border-dashed border-violet-400/30 bg-gradient-to-b from-violet-500/10 to-transparent p-8 dark:from-violet-500/15"
         >
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
             {t('about.focusEyebrow')}

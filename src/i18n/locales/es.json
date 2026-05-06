@@ -26,5 +26,12 @@
     "highlights": "Destacados",
     "focusEyebrow": "Forma de trabajar",
     "focusBody": "Dummy: propiedad clara, feedback rápido y entrega incremental — desde el descubrimiento hasta el despliegue y el pulido final."
+  },
+  "experience": {
+    "kicker": "Trayectoria",
+    "title": "Experiencia",
+    "listHeading": "Roles recientes",
+    "asideEyebrow": "Panorama tecnológico",
+    "techStackLabel": "Stack tecnológico"
   }
 }

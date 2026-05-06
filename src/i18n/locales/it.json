@@ -26,5 +26,12 @@
     "highlights": "Highlights",
     "focusEyebrow": "Stile operativo",
     "focusBody": "Dummy: ownership chiaro, feedback rapido e consegna incrementale — dalla discovery fino al rollout e al rifinitura."
+  },
+  "experience": {
+    "kicker": "Percorso",
+    "title": "Esperienza",
+    "listHeading": "Ruoli recenti",
+    "asideEyebrow": "Panorama stack",
+    "techStackLabel": "Stack tecnologico"
   }
 }

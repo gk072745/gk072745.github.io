@@ -26,5 +26,12 @@
     "highlights": "Highlights",
     "focusEyebrow": "Operating style",
     "focusBody": "Dummy: Clear ownership, fast feedback loops, and incremental delivery — from discovery through rollout and polish."
+  },
+  "experience": {
+    "kicker": "Track record",
+    "title": "Experience",
+    "listHeading": "Recent roles",
+    "asideEyebrow": "Stack snapshot",
+    "techStackLabel": "Tech stack"
   }
 }

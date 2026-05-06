@@ -26,5 +26,12 @@
     "highlights": "Destaques",
     "focusEyebrow": "Estilo de trabalho",
     "focusBody": "Dummy: ownership claro, loops rápidos de feedback e entrega incremental — da descoberta ao rollout e acabamento final."
+  },
+  "experience": {
+    "kicker": "Trajetória",
+    "title": "Experiência",
+    "listHeading": "Cargos recentes",
+    "asideEyebrow": "Panorama da stack",
+    "techStackLabel": "Stack de tecnologia"
   }
 }

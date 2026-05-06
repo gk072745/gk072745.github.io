@@ -26,5 +26,12 @@
     "highlights": "Highlights",
     "focusEyebrow": "Arbeitsweise",
     "focusBody": "Dummy: Klare Ownership, schnelles Feedback und inkrementelle Auslieferung — von Discovery bis Rollout und Feinschliff."
+  },
+  "experience": {
+    "kicker": "Werdegang",
+    "title": "Erfahrung",
+    "listHeading": "Aktuelle Rollen",
+    "asideEyebrow": "Tech-Überblick",
+    "techStackLabel": "Tech-Stack"
   }
 }
