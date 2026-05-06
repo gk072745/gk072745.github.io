@@ -100,6 +100,8 @@ Sections should animate via `[data-anim]` on `SectionContainer` or composed `.an
 npm install
 ```
 
+`package-lock.json` is gitignored (not committed). Each checkout resolves dependencies from `package.json`; run `npm install` after pulling.
+
 ### Run locally
 
 ```bash
@@ -115,6 +117,8 @@ npm run build
 ```
 
 Output goes to `dist/`.
+
+Sass runs through Vite’s **modern compiler API** (`api: modern-compiler` in [`vite.config.js`](vite.config.js)), which avoids Dart Sass “legacy-js-api” deprecation noise from the old JS `render` bridge.
 
 ### Preview production build locally
 
@@ -154,6 +158,8 @@ Mixins for these live in [`src/styles/_mixins.scss`](src/styles/_mixins.scss); t
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Git: ignore `package-lock.json`, stop tracking lockfile in repo     |
+| 2026-05-06 | Vite: enable Sass modern-compiler API; pin Vite to 5.4+ to suppress legacy JS API deprecation warnings |
 | 2026-05-06 | Foundation: modular SCSS (tokens/theme/mixins/animations/utils), SectionContainer shared shell, hooks/helpers baseline, react-i18next +10 locales wired in shell |
 | 2026-05-06 | Added .cursor rules, hooks, MCP config, and slash commands          |
 | 2026-05-06 | Fresh start — Vite + React + SCSS scaffold                          |
