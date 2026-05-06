@@ -186,6 +186,7 @@ Mixins for these live in [`src/styles/_mixins.scss`](src/styles/_mixins.scss); t
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Added `src/data/portfolioContent.js` with section roadmap + dummy content for about/experience/projects/skills/education/certifications/contact |
 | 2026-05-06 | Routing upgraded to latest React Router v7 architecture (`createBrowserRouter` + `RouterProvider` + root layout `Outlet`) |
 | 2026-05-06 | React Router: enable `v7_startTransition` + `v7_relativeSplatPath` future flags on `BrowserRouter`; MCP: add Chrome DevTools server to `.cursor/mcp.json` |
 | 2026-05-06 | Added Hero section (responsive layout, CTAs, accent card, i18n `hero.*` across 10 locales; resume link expects `public/resume.pdf`) |
