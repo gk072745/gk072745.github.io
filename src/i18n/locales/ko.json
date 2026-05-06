@@ -58,5 +58,10 @@
     "title": "학력",
     "listHeading": "학위",
     "noteLabel": "관련 과목"
+  },
+  "certifications": {
+    "kicker": "전문성 검증",
+    "title": "자격증",
+    "viewCredential": "자격증 보기"
   }
 }

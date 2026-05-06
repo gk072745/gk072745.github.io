@@ -58,5 +58,10 @@
     "title": "शिक्षा",
     "listHeading": "डिग्रियां",
     "noteLabel": "प्रासंगिक पाठ्यक्रम"
+  },
+  "certifications": {
+    "kicker": "प्रमाणित विशेषज्ञता",
+    "title": "प्रमाणपत्र",
+    "viewCredential": "क्रेडेंशियल देखें"
   }
 }

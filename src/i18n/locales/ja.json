@@ -58,5 +58,10 @@
     "title": "学歴",
     "listHeading": "学位",
     "noteLabel": "関連科目"
+  },
+  "certifications": {
+    "kicker": "専門性の証明",
+    "title": "認定資格",
+    "viewCredential": "資格を表示"
   }
 }

@@ -41,6 +41,7 @@ gk072745.github.io/
 │   │   ├── Projects/        # Projects section (#projects)
 │   │   ├── Skills/          # Skills section (#skills)
 │   │   ├── Education/       # Education section (#education)
+│   │   ├── Certifications/  # Certifications section (#certifications)
 │   │   └── shared/          # Shared primitives (`SectionContainer`, `LanguageSelect`, …)
 │   ├── data/
 │   │   └── portfolioContent.js   # Section roadmap + placeholder copy
@@ -180,6 +181,7 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | **Certifications** section (`#certifications`): responsive cards with issuer/year, credential link CTA + i18n; `portfolioContent.certifications` → `{ summary, items }` |
 | 2026-05-06 | **Education** section (`#education`): degree timeline card, school/date row, coursework note label + i18n; `portfolioContent.education` → `{ summary, items }` |
 | 2026-05-06 | Projects card layout fix: add visible gap between tech chips and CTA divider (`mt-5` before border) |
 | 2026-05-06 | **Skills** section (`#skills`): category cards with themed `TechPill` chips, i18n labels across 10 locales, wired after Projects in `Home` |

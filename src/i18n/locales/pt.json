@@ -58,5 +58,10 @@
     "title": "Educação",
     "listHeading": "Formações",
     "noteLabel": "Disciplinas relevantes"
+  },
+  "certifications": {
+    "kicker": "Validação técnica",
+    "title": "Certificações",
+    "viewCredential": "Ver credencial"
   }
 }

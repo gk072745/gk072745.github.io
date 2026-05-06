@@ -58,5 +58,10 @@
     "title": "Education",
     "listHeading": "Degrees",
     "noteLabel": "Relevant coursework"
+  },
+  "certifications": {
+    "kicker": "Proof of depth",
+    "title": "Certifications",
+    "viewCredential": "View credential"
   }
 }

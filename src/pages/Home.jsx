@@ -1,6 +1,7 @@
 import React from 'react'
 
 import About from '../components/About/About'
+import Certifications from '../components/Certifications/Certifications'
 import Education from '../components/Education/Education'
 import Experience from '../components/Experience/Experience'
 import Hero from '../components/Hero/Hero'
@@ -16,6 +17,7 @@ function Home() {
       <Projects />
       <Skills />
       <Education />
+      <Certifications />
     </main>
   )
 }

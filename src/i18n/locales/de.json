@@ -58,5 +58,10 @@
     "title": "Ausbildung",
     "listHeading": "Abschlüsse",
     "noteLabel": "Relevante Kurse"
+  },
+  "certifications": {
+    "kicker": "Nachweise",
+    "title": "Zertifikate",
+    "viewCredential": "Zertifikat ansehen"
   }
 }

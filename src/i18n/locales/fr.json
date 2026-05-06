@@ -58,5 +58,10 @@
     "title": "Formation",
     "listHeading": "Diplômes",
     "noteLabel": "Cours pertinents"
+  },
+  "certifications": {
+    "kicker": "Validation technique",
+    "title": "Certifications",
+    "viewCredential": "Voir le certificat"
   }
 }

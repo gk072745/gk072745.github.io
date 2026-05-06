@@ -58,5 +58,10 @@
     "title": "Educación",
     "listHeading": "Titulaciones",
     "noteLabel": "Cursos relevantes"
+  },
+  "certifications": {
+    "kicker": "Respaldo técnico",
+    "title": "Certificaciones",
+    "viewCredential": "Ver credencial"
   }
 }

@@ -58,5 +58,10 @@
     "title": "Formazione",
     "listHeading": "Titoli di studio",
     "noteLabel": "Corsi rilevanti"
+  },
+  "certifications": {
+    "kicker": "Conferme tecniche",
+    "title": "Certificazioni",
+    "viewCredential": "Vedi certificato"
   }
 }

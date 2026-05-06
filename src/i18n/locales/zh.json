@@ -58,5 +58,10 @@
     "title": "教育",
     "listHeading": "学历",
     "noteLabel": "相关课程"
+  },
+  "certifications": {
+    "kicker": "能力凭证",
+    "title": "认证证书",
+    "viewCredential": "查看证书"
   }
 }

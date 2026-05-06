@@ -115,22 +115,26 @@ export const portfolioContent = {
     ],
   },
 
-  certifications: [
-    {
-      id: 'cert-1',
-      name: 'Dummy Cloud Practitioner',
-      issuer: 'Dummy Cloud',
-      year: '2025',
-      link: 'https://example.com/certificate',
-    },
-    {
-      id: 'cert-2',
-      name: 'Dummy Frontend Advanced',
-      issuer: 'Dummy Academy',
-      year: '2024',
-      link: 'https://example.com/certificate',
-    },
-  ],
+  certifications: {
+    summary:
+      'Dummy: Certifications aligned to cloud fundamentals and modern frontend engineering practices.',
+    items: [
+      {
+        id: 'cert-1',
+        name: 'Dummy Cloud Practitioner',
+        issuer: 'Dummy Cloud',
+        year: '2025',
+        link: 'https://example.com/certificate',
+      },
+      {
+        id: 'cert-2',
+        name: 'Dummy Frontend Advanced',
+        issuer: 'Dummy Academy',
+        year: '2024',
+        link: 'https://example.com/certificate',
+      },
+    ],
+  },
 
   contact: {
     email: 'your.email@example.com',
