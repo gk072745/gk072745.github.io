@@ -19,6 +19,53 @@
   }
 }
 
+/**
+ * Themed scrollbars (Firefox + WebKit). Native controls stay thin and match violet accents.
+ */
+@layer utilities {
+  .scrollbar-accent {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(139 92 246 / 0.52) rgb(244 244 245 / 0.6);
+  }
+
+  html.dark .scrollbar-accent {
+    scrollbar-color: rgb(167 139 250 / 0.45) rgb(24 24 27 / 0.85);
+  }
+
+  .scrollbar-accent::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .scrollbar-accent::-webkit-scrollbar-track {
+    margin-block: 6px;
+    border-radius: 9999px;
+    background: rgb(244 244 245 / 0.55);
+  }
+
+  html.dark .scrollbar-accent::-webkit-scrollbar-track {
+    background: rgb(24 24 27 / 0.9);
+  }
+
+  .scrollbar-accent::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: rgb(139 92 246 / 0.42);
+  }
+
+  .scrollbar-accent::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(139 92 246 / 0.68);
+  }
+
+  html.dark .scrollbar-accent::-webkit-scrollbar-thumb {
+    background-color: rgb(167 139 250 / 0.38);
+  }
+
+  html.dark .scrollbar-accent::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(167 139 250 / 0.6);
+  }
+}
+
 /* Section entrance animations (referenced from arbitrary `animate-[...]` utilities) */
 @keyframes fade-up {
   from {
