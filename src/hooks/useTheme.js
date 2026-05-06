@@ -10,6 +10,7 @@ function applyTheme(theme) {
 
   root.dataset.theme = theme
   root.style.colorScheme = theme === 'dark' ? 'dark' : 'light'
+  root.classList.toggle('dark', theme === 'dark')
 }
 
 function readStoredTheme() {

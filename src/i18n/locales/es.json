@@ -19,5 +19,12 @@
     "cardEyebrow": "Principios",
     "cardTitle": "Entregar con claridad",
     "cardBody": "Sistemas sólidos, interfaces claras e iteración rápida — para equipos que se toman en serio la calidad."
+  },
+  "about": {
+    "kicker": "Introducción",
+    "title": "Sobre mí",
+    "highlights": "Destacados",
+    "focusEyebrow": "Forma de trabajar",
+    "focusBody": "Dummy: propiedad clara, feedback rápido y entrega incremental — desde el descubrimiento hasta el despliegue y el pulido final."
   }
 }

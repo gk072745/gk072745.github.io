@@ -19,5 +19,12 @@
     "cardEyebrow": "Principi",
     "cardTitle": "Consegna con chiarezza",
     "cardBody": "Sistemi solidi, interfacce chiare e iterazioni rapide — per team che tengono alla qualità."
+  },
+  "about": {
+    "kicker": "Introduzione",
+    "title": "Chi sono",
+    "highlights": "Highlights",
+    "focusEyebrow": "Stile operativo",
+    "focusBody": "Dummy: ownership chiaro, feedback rapido e consegna incrementale — dalla discovery fino al rollout e al rifinitura."
   }
 }

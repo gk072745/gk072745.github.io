@@ -19,5 +19,12 @@
     "cardEyebrow": "Principes",
     "cardTitle": "Livrer avec clarté",
     "cardBody": "Des systèmes solides, des interfaces accessibles et des itérations rapides — pour les équipes qui valorisent la qualité."
+  },
+  "about": {
+    "kicker": "Introduction",
+    "title": "À propos",
+    "highlights": "Points forts",
+    "focusEyebrow": "Façon de travailler",
+    "focusBody": "Dummy: responsabilités claires, boucles de feedback rapides et livraison incrémentale — de la découverte jusqu’au déploiement et au polish."
   }
 }

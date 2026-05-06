@@ -19,5 +19,12 @@
     "cardEyebrow": "原则",
     "cardTitle": "清晰交付",
     "cardBody": "稳健的系统、清晰的界面、快速的迭代 — 面向重视质量的团队。"
+  },
+  "about": {
+    "kicker": "简介",
+    "title": "关于我",
+    "highlights": "亮点",
+    "focusEyebrow": "工作方式",
+    "focusBody": "占位：清晰的职责归属、快速的反馈闭环与增量交付 — 从需求探索到上线与打磨。"
   }
 }

@@ -19,5 +19,12 @@
     "cardEyebrow": "価値観",
     "cardTitle": "明快に届ける",
     "cardBody": "堅牢なシステム、分かりやすいUI、速い改善サイクル — 品質を大切にするチームのための設計です。"
+  },
+  "about": {
+    "kicker": "Introduction",
+    "title": "自己紹介",
+    "highlights": "ハイライト",
+    "focusEyebrow": "ワークスタイル",
+    "focusBody": "ダミー: 明確なオーナーシップと迅速なフィードバック、段階的なリリース — 調査から展開・磨き込みまで。"
   }
 }

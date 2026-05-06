@@ -19,5 +19,12 @@
     "cardEyebrow": "Principles",
     "cardTitle": "Ship with clarity",
     "cardBody": "Strong systems, approachable interfaces, and fast iteration — built for teams that care about quality."
+  },
+  "about": {
+    "kicker": "Introduction",
+    "title": "About",
+    "highlights": "Highlights",
+    "focusEyebrow": "Operating style",
+    "focusBody": "Dummy: Clear ownership, fast feedback loops, and incremental delivery — from discovery through rollout and polish."
   }
 }

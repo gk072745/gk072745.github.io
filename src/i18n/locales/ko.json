@@ -19,5 +19,12 @@
     "cardEyebrow": "원칙",
     "cardTitle": "명확하게 전달",
     "cardBody": "단단한 시스템, 이해하기 쉬운 UI, 빠른 반복 — 품질을 중시하는 팀을 위한 접근입니다."
+  },
+  "about": {
+    "kicker": "소개",
+    "title": "소개",
+    "highlights": "하이라이트",
+    "focusEyebrow": "업무 스타일",
+    "focusBody": "더미: 명확한 오너십과 빠른 피드백 루프, 단계적 출시 — 탐색부터 롤아웃과 마무리까지."
   }
 }
