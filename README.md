@@ -38,6 +38,8 @@ gk072745.github.io/
 │   │   ├── Hero/            # Hero section (landing)
 │   │   ├── About/           # About section (#about)
 │   │   ├── Experience/      # Experience section (#experience)
+│   │   ├── Projects/        # Projects section (#projects)
+│   │   ├── Skills/          # Skills section (#skills)
 │   │   └── shared/          # Shared primitives (`SectionContainer`, `LanguageSelect`, …)
 │   ├── data/
 │   │   └── portfolioContent.js   # Section roadmap + placeholder copy
@@ -177,6 +179,9 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Projects card layout fix: add visible gap between tech chips and CTA divider (`mt-5` before border) |
+| 2026-05-06 | **Skills** section (`#skills`): category cards with themed `TechPill` chips, i18n labels across 10 locales, wired after Projects in `Home` |
+| 2026-05-06 | **Projects** section (`#projects`): responsive 2-column cards, impact callout, `TechPill` tags, external Live/Source links + i18n; `portfolioContent.projects` → `{ summary, items }` |
 | 2026-05-06 | Experience: tighten vertical gap between highlights and tech stack (`pt-3` only, no extra `mt-*`) |
 | 2026-05-06 | Experience: “Tech stack” label + i18n; subtler separator above chips; `gap-3` between pills; role `pb-8` before next-entry divider (`last:pb-0`) |
 | 2026-05-06 | Tech icons: `TECH_ICON_TINT` = `text-violet-700 dark:text-violet-400` (violet-only, no fuchsia); React 32×32 atom path (`currentColor`); `TechPill` full-opacity icons |

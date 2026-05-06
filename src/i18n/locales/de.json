@@ -33,5 +33,24 @@
     "listHeading": "Aktuelle Rollen",
     "asideEyebrow": "Tech-Überblick",
     "techStackLabel": "Tech-Stack"
+  },
+  "projects": {
+    "kicker": "Ausgewählte Arbeit",
+    "title": "Projekte",
+    "impactEyebrow": "Wirkung",
+    "tagsLabel": "Technologien",
+    "liveDemo": "Live-Demo",
+    "sourceCode": "Quellcode"
+  },
+  "skills": {
+    "kicker": "Kompetenzen",
+    "title": "Skills",
+    "groups": {
+      "languages": "Sprachen",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Datenbanken",
+      "tools": "Tools"
+    }
   }
 }

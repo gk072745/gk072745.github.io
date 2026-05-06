@@ -33,5 +33,24 @@
     "listHeading": "최근 역할",
     "asideEyebrow": "스택 스냅샷",
     "techStackLabel": "기술 스택"
+  },
+  "projects": {
+    "kicker": "선정 작업",
+    "title": "프로젝트",
+    "impactEyebrow": "성과",
+    "tagsLabel": "기술",
+    "liveDemo": "라이브 데모",
+    "sourceCode": "소스 코드"
+  },
+  "skills": {
+    "kicker": "역량",
+    "title": "스킬",
+    "groups": {
+      "languages": "언어",
+      "frontend": "프론트엔드",
+      "backend": "백엔드",
+      "databases": "데이터베이스",
+      "tools": "도구"
+    }
   }
 }

@@ -33,5 +33,24 @@
     "listHeading": "हाल की भूमिकाएँ",
     "asideEyebrow": "टेक झलक",
     "techStackLabel": "टेक स्टैक"
+  },
+  "projects": {
+    "kicker": "चयनित कार्य",
+    "title": "प्रोजेक्ट्स",
+    "impactEyebrow": "प्रभाव",
+    "tagsLabel": "तकनीकें",
+    "liveDemo": "लाइव डेमो",
+    "sourceCode": "सोर्स कोड"
+  },
+  "skills": {
+    "kicker": "क्षमताएँ",
+    "title": "स्किल्स",
+    "groups": {
+      "languages": "भाषाएँ",
+      "frontend": "फ्रंटएंड",
+      "backend": "बैकएंड",
+      "databases": "डेटाबेस",
+      "tools": "टूल्स"
+    }
   }
 }

@@ -33,5 +33,24 @@
     "listHeading": "近期岗位",
     "asideEyebrow": "技术栈概览",
     "techStackLabel": "技术栈"
+  },
+  "projects": {
+    "kicker": "代表作品",
+    "title": "项目",
+    "impactEyebrow": "成效",
+    "tagsLabel": "技术",
+    "liveDemo": "在线演示",
+    "sourceCode": "源代码"
+  },
+  "skills": {
+    "kicker": "能力",
+    "title": "技能",
+    "groups": {
+      "languages": "语言",
+      "frontend": "前端",
+      "backend": "后端",
+      "databases": "数据库",
+      "tools": "工具"
+    }
   }
 }

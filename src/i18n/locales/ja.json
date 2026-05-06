@@ -33,5 +33,24 @@
     "listHeading": "直近の役割",
     "asideEyebrow": "スタック概要",
     "techStackLabel": "技術スタック"
+  },
+  "projects": {
+    "kicker": "主な実績",
+    "title": "プロジェクト",
+    "impactEyebrow": "インパクト",
+    "tagsLabel": "技術スタック",
+    "liveDemo": "ライブデモ",
+    "sourceCode": "ソースコード"
+  },
+  "skills": {
+    "kicker": "スキルセット",
+    "title": "スキル",
+    "groups": {
+      "languages": "言語",
+      "frontend": "フロントエンド",
+      "backend": "バックエンド",
+      "databases": "データベース",
+      "tools": "ツール"
+    }
   }
 }

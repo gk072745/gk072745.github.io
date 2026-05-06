@@ -63,30 +63,36 @@ export const portfolioContent = {
     ],
   },
 
-  projects: [
-    {
-      id: 'proj-1',
-      title: 'Dummy E-Commerce Platform',
-      description:
-        'Full-stack shopping app with auth, cart, payment flow, and admin analytics.',
-      impact: 'Dummy impact: Increased conversion by 18% in test cohort.',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      liveUrl: 'https://example.com',
-      repoUrl: 'https://github.com/your-username/dummy-ecommerce',
-    },
-    {
-      id: 'proj-2',
-      title: 'Dummy Portfolio CMS',
-      description:
-        'Content-managed portfolio with multilingual support and theme control.',
-      impact: 'Dummy impact: Reduced content update time by 60%.',
-      tags: ['Vite', 'React', 'i18next'],
-      liveUrl: 'https://example.com',
-      repoUrl: 'https://github.com/your-username/dummy-portfolio-cms',
-    },
-  ],
+  projects: {
+    summary:
+      'Dummy: Snapshots of shipped work — constraints, measurable outcomes, and the stack behind each build.',
+    items: [
+      {
+        id: 'proj-1',
+        title: 'Dummy E-Commerce Platform',
+        description:
+          'Full-stack shopping app with auth, cart, payment flow, and admin analytics.',
+        impact: 'Dummy impact: Increased conversion by 18% in test cohort.',
+        tags: ['React', 'Node.js', 'MongoDB'],
+        liveUrl: 'https://example.com',
+        repoUrl: 'https://github.com/your-username/dummy-ecommerce',
+      },
+      {
+        id: 'proj-2',
+        title: 'Dummy Portfolio CMS',
+        description:
+          'Content-managed portfolio with multilingual support and theme control.',
+        impact: 'Dummy impact: Reduced content update time by 60%.',
+        tags: ['Vite', 'React', 'i18next'],
+        liveUrl: 'https://example.com',
+        repoUrl: 'https://github.com/your-username/dummy-portfolio-cms',
+      },
+    ],
+  },
 
   skills: {
+    summary:
+      'Dummy: Breadth across product frontend, backend services, data stores, and delivery tooling used in production workflows.',
     languages: ['JavaScript', 'TypeScript', 'SQL', 'Python'],
     frontend: ['React', 'Redux', 'SCSS', 'HTML5', 'CSS3'],
     backend: ['Node.js', 'Express', 'REST APIs'],

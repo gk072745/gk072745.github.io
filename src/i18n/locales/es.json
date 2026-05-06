@@ -33,5 +33,24 @@
     "listHeading": "Roles recientes",
     "asideEyebrow": "Panorama tecnológico",
     "techStackLabel": "Stack tecnológico"
+  },
+  "projects": {
+    "kicker": "Trabajos destacados",
+    "title": "Proyectos",
+    "impactEyebrow": "Impacto",
+    "tagsLabel": "Tecnologías",
+    "liveDemo": "Demo en vivo",
+    "sourceCode": "Código fuente"
+  },
+  "skills": {
+    "kicker": "Capacidades",
+    "title": "Habilidades",
+    "groups": {
+      "languages": "Lenguajes",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de datos",
+      "tools": "Herramientas"
+    }
   }
 }
