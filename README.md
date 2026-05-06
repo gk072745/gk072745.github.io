@@ -182,6 +182,10 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Projects/Certifications actions updated: always show Live/Code/Credential buttons; disable with private/unavailable tooltips when links can’t be shared |
+| 2026-05-06 | Content refresh: added Vue UI library project, adjusted project visibility (Nilaya/Foyr private handling), expanded skills stack, added 12th (SIA), and Masai certifications with pending links |
+| 2026-05-06 | About: replaced dummy “Operating style” with resume-aligned copy + added interactive focus tabs (Ownership/Feedback/Delivery loop) |
+| 2026-05-06 | Replaced dummy content with resume-based profile + real project experience; wired all Resume downloads to `src/assets/Govind_Kumawat_Resume_.pdf` (Hero + QuickDock + PiP) |
 | 2026-05-06 | Fix Language dropdown cropping: listbox now renders in a `document.body` portal with fixed positioning (not clipped by header effects) |
 | 2026-05-06 | Navbar responsive fix: desktop full nav + mobile hamburger menu panel with 44px touch targets and close-on-link-click behavior |
 | 2026-05-06 | QuickDock PiP layout tightened: smaller PiP window, removed close/extra buttons inside PiP, and made Resume CTA full-width |

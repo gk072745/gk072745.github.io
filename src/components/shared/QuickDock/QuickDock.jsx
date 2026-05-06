@@ -7,8 +7,6 @@ import { cn } from '../../../helpers/animation'
 const STORAGE_OPEN_KEY = 'portfolio_quick_dock_open'
 const STORAGE_PIP_PRIMED_KEY = 'portfolio_quick_dock_pip_primed'
 
-const RESUME_PATH = '/resume.pdf'
-
 function readBool(key, fallback) {
   try {
     const raw = window.localStorage.getItem(key)
@@ -47,6 +45,7 @@ function QuickDockCard({
   ctaLabel,
   onCtaClick,
   onClose,
+  resumeUrl,
   variant = 'full',
 }) {
   const isPip = variant === 'pip'
@@ -93,7 +92,7 @@ function QuickDockCard({
 
       <div className={cn('mt-5 flex flex-wrap gap-3 border-t border-zinc-200/90 pt-4 dark:border-zinc-700/75', isPip && 'mt-3 border-t-0 pt-0')}>
         <a
-          href={RESUME_PATH}
+          href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -149,6 +148,7 @@ function QuickDock({
   highlights = [],
   ctaLabel,
   onCtaClick,
+  resumeUrl = '/resume.pdf',
 }) {
   const [open, setOpen] = useState(() => readBool(STORAGE_OPEN_KEY, false))
   const [pipPrimed, setPipPrimed] = useState(() => readBool(STORAGE_PIP_PRIMED_KEY, false))
@@ -218,6 +218,7 @@ function QuickDock({
           highlights={cleanHighlights}
           ctaLabel={null}
           onCtaClick={undefined}
+          resumeUrl={resumeUrl}
           variant="pip"
         />
       </div>
@@ -310,6 +311,7 @@ function QuickDock({
           ctaLabel={ctaLabel}
           onCtaClick={onCtaClick}
           onClose={() => setOpenSynced(false)}
+          resumeUrl={resumeUrl}
         />
       )}
     </div>

@@ -32,7 +32,17 @@
     "title": "About",
     "highlights": "Highlights",
     "focusEyebrow": "Operating style",
-    "focusBody": "Dummy: Clear ownership, fast feedback loops, and incremental delivery — from discovery through rollout and polish."
+    "focusBody": "I work like a product owner: clarify scope, ship incrementally, measure impact, and keep quality gates tight (performance, accessibility, and maintainability).",
+    "focusTabs": {
+      "ownership": "Ownership",
+      "feedback": "Feedback",
+      "delivery": "Delivery loop"
+    },
+    "focusTabBody": {
+      "ownership": "I take end-to-end ownership: define success criteria, break work into milestones, and keep stakeholders unblocked with clear updates.",
+      "feedback": "Fast feedback loops: small PRs, quick review cycles, and early demos so direction stays correct and surprises are minimized.",
+      "delivery": "Incremental delivery with quality gates: reusable components, performance checks, and pragmatic refactors to keep the codebase healthy."
+    }
   },
   "experience": {
     "kicker": "Track record",

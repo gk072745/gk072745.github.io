@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { portfolioContent } from '../../data/portfolioContent'
 import { HighlightCheckRow, SectionContainer } from '../shared'
@@ -6,6 +6,13 @@ import { HighlightCheckRow, SectionContainer } from '../shared'
 function About() {
   const { t } = useTranslation()
   const { about } = portfolioContent
+  const [focusTab, setFocusTab] = useState('ownership')
+
+  const focusTabs = [
+    { id: 'ownership', label: t('about.focusTabs.ownership') },
+    { id: 'feedback', label: t('about.focusTabs.feedback') },
+    { id: 'delivery', label: t('about.focusTabs.delivery') },
+  ]
 
   return (
     <SectionContainer
@@ -56,6 +63,34 @@ function About() {
           <p className="text-base leading-relaxed text-zinc-800 dark:text-zinc-100">
             {t('about.focusBody')}
           </p>
+
+          <div className="mt-5 rounded-xl border border-violet-500/20 bg-white/60 p-4 shadow-sm backdrop-blur dark:border-violet-400/15 dark:bg-zinc-950/30">
+            <div className="flex flex-wrap gap-2">
+              {focusTabs.map((tab) => {
+                const active = tab.id === focusTab
+                return (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setFocusTab(tab.id)}
+                    className={[
+                      'inline-flex min-h-10 items-center justify-center rounded-full px-3 text-sm font-semibold transition-colors',
+                      active
+                        ? 'bg-violet-600 text-white'
+                        : 'bg-zinc-100 text-zinc-800 hover:bg-violet-100 hover:text-violet-900 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-violet-950/60 dark:hover:text-violet-100',
+                      'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500',
+                    ].join(' ')}
+                  >
+                    {tab.label}
+                  </button>
+                )
+              })}
+            </div>
+
+            <p className="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-zinc-200" lang="en">
+              {t(`about.focusTabBody.${focusTab}`)}
+            </p>
+          </div>
         </div>
       </div>
     </SectionContainer>

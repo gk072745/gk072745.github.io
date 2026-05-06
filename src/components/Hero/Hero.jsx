@@ -5,7 +5,9 @@ import { HiOutlineArrowRight } from 'react-icons/hi2'
 import { SectionContainer } from '../shared'
 import { cn } from '../../helpers/animation'
 
-const RESUME_PATH = '/resume.pdf'
+import resumePdfUrl from '../../assets/Govind_Kumawat_Resume_.pdf'
+
+const RESUME_PATH = resumePdfUrl
 
 function Hero() {
   const { t } = useTranslation()

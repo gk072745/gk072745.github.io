@@ -5,6 +5,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { HiBars3, HiOutlineXMark } from 'react-icons/hi2'
 
 import { LanguageSelect, QuickDock } from './components/shared'
+import resumePdfUrl from './assets/Govind_Kumawat_Resume_.pdf'
 import { useLocale } from './hooks/useLocale'
 import { useTheme } from './hooks/useTheme'
 import { getLanguageOptions } from './helpers/i18n'
@@ -129,6 +130,7 @@ function App() {
           'Performance, DX, and accessibility',
           'Shipped features end-to-end',
         ]}
+        resumeUrl={resumePdfUrl}
         ctaLabel={t('hero.ctaContact')}
         onCtaClick={() => {
           window.location.hash = '#contact'

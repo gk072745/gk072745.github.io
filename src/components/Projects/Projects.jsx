@@ -14,6 +14,11 @@ const externalLinkBtn = cn(
   'dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50 dark:hover:border-violet-400/35 dark:hover:text-violet-300'
 )
 
+const disabledLinkBtn = cn(
+  'inline-flex min-h-[44px] items-center gap-2 rounded-lg border px-4 py-2 text-sm font-semibold',
+  'cursor-not-allowed border-zinc-200 bg-zinc-100 text-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-400'
+)
+
 function Projects() {
   const { t } = useTranslation()
   const {
@@ -94,7 +99,17 @@ function Projects() {
                   {t('projects.liveDemo')}
                   <HiOutlineArrowTopRightOnSquare className="size-4 shrink-0 opacity-90" aria-hidden />
                 </a>
-              ) : null}
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  title={project.liveDisabledReason || 'Not publicly available.'}
+                  className={disabledLinkBtn}
+                >
+                  {t('projects.liveDemo')}
+                  <HiOutlineArrowTopRightOnSquare className="size-4 shrink-0 opacity-70" aria-hidden />
+                </button>
+              )}
               {project.repoUrl ? (
                 <a
                   href={project.repoUrl}
@@ -105,7 +120,17 @@ function Projects() {
                   {t('projects.sourceCode')}
                   <HiOutlineArrowTopRightOnSquare className="size-4 shrink-0 opacity-90" aria-hidden />
                 </a>
-              ) : null}
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  title={project.repoDisabledReason || 'Private repository.'}
+                  className={disabledLinkBtn}
+                >
+                  {t('projects.sourceCode')}
+                  <HiOutlineArrowTopRightOnSquare className="size-4 shrink-0 opacity-70" aria-hidden />
+                </button>
+              )}
             </div>
           </article>
         ))}
