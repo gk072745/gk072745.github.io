@@ -1,0 +1,15 @@
+{
+  "common": {
+    "language": "Idioma",
+    "themeLight": "Claro",
+    "themeDark": "Escuro",
+    "toggleTheme": "Alternar tema"
+  },
+  "nav": {
+    "home": "Início"
+  },
+  "home": {
+    "title": "Govind Kumawat",
+    "subtitle": "Portfólio em breve."
+  }
+}

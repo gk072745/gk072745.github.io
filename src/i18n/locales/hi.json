@@ -1,0 +1,15 @@
+{
+  "common": {
+    "language": "भाषा",
+    "themeLight": "हल्का",
+    "themeDark": "गहरा",
+    "toggleTheme": "थीम बदलें"
+  },
+  "nav": {
+    "home": "होम"
+  },
+  "home": {
+    "title": "गोविन्द कुमावत",
+    "subtitle": "पोर्टफोलियो जल्द आ रहा है।"
+  }
+}

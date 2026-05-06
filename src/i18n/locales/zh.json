@@ -1,0 +1,15 @@
+{
+  "common": {
+    "language": "语言",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "toggleTheme": "切换主题"
+  },
+  "nav": {
+    "home": "首页"
+  },
+  "home": {
+    "title": "Govind Kumawat",
+    "subtitle": "作品集即将上线。"
+  }
+}

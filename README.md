@@ -16,9 +16,10 @@ A modern, fully responsive portfolio targeting senior/high-impact engineering ro
 |-------------|-----------------------------------|
 | Framework   | React 18                          |
 | Bundler     | Vite 5                            |
-| Styling     | SCSS (Sass)                       |
+| Styling     | SCSS (Sass), design tokens / CSS vars + theming |
 | Routing     | React Router v6                   |
 | Icons       | React Icons                       |
+| i18n        | i18next, react-i18next, LanguageDetector (`en`, `hi`, `ja`, `de`, `fr`, `es`, `pt`, `it`, `ko`, `zh`) |
 | Deployment  | GitHub Pages via `gh-pages`       |
 
 ---
@@ -27,23 +28,62 @@ A modern, fully responsive portfolio targeting senior/high-impact engineering ro
 
 ```
 gk072745.github.io/
-├── public/                  # Static files served as-is
+├── public/
 │   ├── favicon.ico
 │   ├── manifest.json
 │   └── robots.txt
 ├── src/
-│   ├── assets/              # Images, resume PDF, fonts
-│   ├── components/          # Reusable UI components (Navbar, Footer, etc.)
-│   ├── pages/               # One file per page/section
+│   ├── assets/
+│   ├── components/
+│   │   └── shared/          # Shared primitives (`SectionContainer`, etc.)
+│   ├── helpers/
+│   │   ├── animation.js      # cn(), motion class helpers
+│   │   └── i18n.js           # locales list, normalization, picker labels
+│   ├── hooks/
+│   │   ├── useLocale.js      # language change + synced <html lang>
+│   │   └── useTheme.js       # persisted light/dark on data-theme + color-scheme
+│   ├── i18n/
+│   │   ├── index.js          # i18next init + detectors
+│   │   └── locales/          # one JSON file per language
+│   ├── pages/
 │   ├── styles/
-│   │   ├── _variables.scss  # Colors, spacing, breakpoints, mixins
-│   │   └── global.scss      # CSS reset + base styles
-│   ├── App.jsx              # Router shell
-│   └── main.jsx             # React DOM mount point
-├── index.html               # Vite HTML entry
-├── vite.config.js           # Vite configuration
-└── package.json             # Dependencies and scripts
+│   │   ├── _variables.scss    # Sass tokens (spacing, type scale, breakpoints, timing)
+│   │   ├── _theme.scss        # CSS vars for semantic colors (+ light overrides)
+│   │   ├── _mixins.scss       # breakpoints, transitions, hover, reduced-motion helpers
+│   │   ├── _animations.scss   # keyframes + .anim-* utility classes
+│   │   ├── _utilities.scss    # layout + accessibility utilities
+│   │   └── global.scss        # base reset consuming tokens + importing partials
+│   ├── App.jsx
+│   └── main.jsx               # mounts after `./i18n` init import
+├── index.html                 # `<html lang="en" data-theme="dark">` default shell
+├── vite.config.js
+└── package.json
 ```
+
+---
+
+## SCSS conventions
+
+| File | Responsibility |
+|------|----------------|
+| `_variables.scss` | Single source truth for Sass tokens (spacing/radius/type/motion breakpoints). Prefer CSS vars at runtime (`var(--color-bg)`) for theme-able colors. |
+| `_theme.scss` | Maps semantic colors to `:root`/`*[data-theme]` CSS variables consumed by layouts. |
+| `_mixins.scss` | `mq-up`, `mq-down`, `respond` alias, transitions, hover gating. |
+| `_animations.scss` | Global `@keyframes`, `.anim-*` helpers, respects `prefers-reduced-motion`. |
+| `_utilities.scss` | Minimal utility classes (`u-container`, stagger helpers). |
+
+Sections should animate via `[data-anim]` on `SectionContainer` or composed `.anim-*` classes shared across the site — **never scatter one-off durations**.
+
+---
+
+## i18n conventions
+
+| Item | Detail |
+|------|--------|
+| Locale files | `src/i18n/locales/{code}.json` — mirrored keys across all locales. |
+| Detection | Stored under `portfolio_language`, browser language fallback, synced `document.documentElement.lang`. |
+| Switching UI | Implemented in [`src/App.jsx`](src/App.jsx) with native labels curated in [`src/helpers/i18n.js`](src/helpers/i18n.js). |
+| Adding languages | Duplicate JSON skeleton, extend `SUPPORTED_LANGUAGE_CODES`, update picker labels & sync mapping in `helpers/i18n.js`. |
 
 ---
 
@@ -106,7 +146,7 @@ This runs `npm run build` first (via `predeploy`), then pushes the `dist/` folde
 | Desktop| ≤ 1280px    |
 | Wide   | ≥ 1600px    |
 
-Mixins for these are defined in `src/styles/_variables.scss`.
+Mixins for these live in [`src/styles/_mixins.scss`](src/styles/_mixins.scss); token values originate from [`src/styles/_variables.scss`](src/styles/_variables.scss).
 
 ---
 
@@ -114,6 +154,7 @@ Mixins for these are defined in `src/styles/_variables.scss`.
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Foundation: modular SCSS (tokens/theme/mixins/animations/utils), SectionContainer shared shell, hooks/helpers baseline, react-i18next +10 locales wired in shell |
 | 2026-05-06 | Added .cursor rules, hooks, MCP config, and slash commands          |
 | 2026-05-06 | Fresh start — Vite + React + SCSS scaffold                          |
 

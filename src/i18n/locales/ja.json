@@ -1,0 +1,15 @@
+{
+  "common": {
+    "language": "言語",
+    "themeLight": "ライト",
+    "themeDark": "ダーク",
+    "toggleTheme": "テーマを切り替え"
+  },
+  "nav": {
+    "home": "ホーム"
+  },
+  "home": {
+    "title": "Govind Kumawat",
+    "subtitle": "ポートフォリオは準備中です。"
+  }
+}

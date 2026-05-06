@@ -1,0 +1,74 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.section {
+  width: 100%;
+  scroll-margin-block-start: #{$space-xl};
+
+  @include mq-down($bp-sm) {
+    scroll-margin-block-start: #{$space-lg};
+  }
+}
+
+._padded {
+  padding-block: $section-padding-y-desktop;
+
+  @include mq-down($bp-lg) {
+    padding-block: $section-padding-y-tablet;
+  }
+
+  @include mq-down($bp-sm) {
+    padding-block: $section-padding-y-mobile;
+  }
+}
+
+._narrow .inner {
+  max-width: #{$bp-md};
+}
+
+@mixin child-motion-base {
+  opacity: 0;
+  animation-duration: var(--duration-enter);
+  animation-timing-function: var(--ease-out-expo);
+  animation-fill-mode: forwards;
+}
+
+._childrenAnimate {
+  @media (prefers-reduced-motion: reduce) {
+    > * {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  > * {
+    @include child-motion-base;
+    animation-delay: calc(var(--stagger-base, 0ms));
+  }
+
+  &:not([data-anim]),
+  &[data-anim='fade-up'] {
+    > * {
+      animation-name: fade-up;
+    }
+  }
+
+  &[data-anim='fade-in'] > * {
+    animation-name: fade-in;
+  }
+
+  &[data-anim='scale'] > * {
+    animation-name: scale-in;
+  }
+
+  &[data-anim='float'] > * {
+    animation-name: subtle-float;
+  }
+
+  @for $i from 1 through 16 {
+    > *:nth-child(#{$i}) {
+      animation-delay: calc(var(--stagger-base, 0ms) + #{($i - 1) * 60ms});
+    }
+  }
+}

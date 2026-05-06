@@ -1,0 +1,90 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as mx;
+
+.shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+  justify-content: flex-end;
+
+  padding: $space-md;
+  padding-inline: clamp($space-md, 4vw, $space-xl);
+
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+
+  background-color: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+
+  @include mx.mq-down($bp-sm) {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+
+  @include mx.mq-down($bp-sm) {
+    justify-content: space-between;
+  }
+}
+
+.langSelect {
+  flex: 1 1 auto;
+  min-height: 44px;
+  min-width: min(280px, 100%);
+  padding: $space-sm $space-md;
+  font-family: var(--font-primary, #{$font-primary});
+  font-size: var(--font-size-sm, #{$font-size-sm});
+  border-radius: var(--radius-md, #{$radius-md});
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  @include mx.transition((border-color, box-shadow));
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}
+
+.themeButton {
+  flex: 0 0 auto;
+  min-height: 44px;
+  min-width: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-full, #{$radius-full});
+  border: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  cursor: pointer;
+  @include mx.transition((background-color, color, transform, border-color));
+
+  @include mx.hoverable {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  }
+
+  @include mx.mq-down($bp-sm) {
+    width: 100%;
+    border-radius: var(--radius-md, #{$radius-md});
+  }
+
+  &__icon {
+    font-size: 1.35rem;
+  }
+}

@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.u-section-padding {
+  padding-block: var(--section-padding-y, #{$section-padding-y-desktop});
+
+  @include mq-down($bp-lg) {
+    padding-block: #{$section-padding-y-tablet};
+  }
+
+  @include mq-down($bp-sm) {
+    padding-block: #{$section-padding-y-mobile};
+  }
+}
+
+.u-container {
+  width: min(100% - 2 * var(--container-gutter, #{$container-gutter}), var(--container-max-width, #{$container-max-width}));
+  margin-inline: auto;
+}
+
+.u-text-muted {
+  color: var(--color-text-muted);
+}
+
+// Staggered children utility: set --stagger-base on parent (ms)
+.u-stagger-children > * {
+  animation-delay: calc(var(--stagger-base, 0ms) + (var(--index, 0) * var(--stagger-step, #{$stagger-step})));
+}
+
+@for $i from 1 through 12 {
+  .u-delay-#{$i} {
+    animation-delay: #{$i * 60ms};
+  }
+}
