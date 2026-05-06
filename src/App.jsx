@@ -1,9 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 
-import Home from './pages/Home'
 import { useLocale } from './hooks/useLocale'
 import { useTheme } from './hooks/useTheme'
 import { getLanguageOptions } from './helpers/i18n'
@@ -15,7 +14,7 @@ function App() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <BrowserRouter>
+    <>
       <header className={styles.shell} role="banner">
         <div className={styles.toolbar}>
           <label className="u-visually-hidden" htmlFor="lang-select">
@@ -51,10 +50,8 @@ function App() {
         </div>
       </header>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+      <Outlet />
+    </>
   )
 }
 

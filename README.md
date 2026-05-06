@@ -17,7 +17,7 @@ A modern, fully responsive portfolio targeting senior/high-impact engineering ro
 | Framework   | React 18                          |
 | Bundler     | Vite 5                            |
 | Styling     | SCSS (Sass), design tokens / CSS vars + theming |
-| Routing     | React Router v6                   |
+| Routing     | React Router v7 (`createBrowserRouter` + `RouterProvider`) |
 | Icons       | React Icons                       |
 | i18n        | i18next, react-i18next, LanguageDetector (`en`, `hi`, `ja`, `de`, `fr`, `es`, `pt`, `it`, `ko`, `zh`) |
 | Deployment  | GitHub Pages via `gh-pages`       |
@@ -54,8 +54,9 @@ gk072745.github.io/
 │   │   ├── _animations.scss   # keyframes + .anim-* utility classes
 │   │   ├── _utilities.scss    # layout + accessibility utilities
 │   │   └── global.scss        # base reset consuming tokens + importing partials
-│   ├── App.jsx
-│   └── main.jsx               # mounts after `./i18n` init import
+│   ├── App.jsx                # Root layout shell (header + Outlet)
+│   ├── router.jsx             # Route config via createBrowserRouter
+│   └── main.jsx               # mounts RouterProvider after `./i18n` init
 ├── index.html                 # `<html lang="en" data-theme="dark">` default shell
 ├── vite.config.js
 └── package.json
@@ -83,8 +84,32 @@ Sections should animate via `[data-anim]` on `SectionContainer` or composed `.an
 |------|--------|
 | Locale files | `src/i18n/locales/{code}.json` — mirrored keys across all locales. |
 | Detection | Stored under `portfolio_language`, browser language fallback, synced `document.documentElement.lang`. |
-| Switching UI | Implemented in [`src/App.jsx`](src/App.jsx) with native labels curated in [`src/helpers/i18n.js`](src/helpers/i18n.js). |
+| Switching UI | Implemented in [`src/App.jsx`](src/App.jsx) (root layout) with native labels curated in [`src/helpers/i18n.js`](src/helpers/i18n.js). |
 | Adding languages | Duplicate JSON skeleton, extend `SUPPORTED_LANGUAGE_CODES`, update picker labels & sync mapping in `helpers/i18n.js`. |
+
+---
+
+## MCP tooling (Cursor IDE)
+
+For agents that need a **real browser**, enable MCP servers in Cursor. This repo lists recommended entries in [`.cursor/mcp.json`](.cursor/mcp.json):
+
+| Server | Purpose |
+|--------|---------|
+| **chrome-devtools-mcp** | Official Chrome DevTools MCP — open `http://localhost:5173`, inspect console/network, screenshots, traces. Runs via `npx chrome-devtools-mcp@latest` (`--no-usage-statistics` in config). Requires **Node.js ≥ 20.19** and **Chrome stable**. Repo: [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp). |
+| **Playwright MCP** (`@playwright/mcp`) | Scripted navigation, snapshots, responsiveness checks across engines. |
+
+After editing MCP config, restart Cursor or reload MCP. Keep `npm run dev` running locally so agents can attach to Vite.
+
+---
+
+### Routing architecture
+
+Routing uses the modern data-router setup:
+- [`src/router.jsx`](src/router.jsx): `createBrowserRouter([...])`
+- [`src/main.jsx`](src/main.jsx): `<RouterProvider router={router} />`
+- [`src/App.jsx`](src/App.jsx): root route layout with `<Outlet />`
+
+This is the current recommended path for React Router v7 and avoids old BrowserRouter future-flag migration warnings.
 
 ---
 
@@ -161,6 +186,8 @@ Mixins for these live in [`src/styles/_mixins.scss`](src/styles/_mixins.scss); t
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Routing upgraded to latest React Router v7 architecture (`createBrowserRouter` + `RouterProvider` + root layout `Outlet`) |
+| 2026-05-06 | React Router: enable `v7_startTransition` + `v7_relativeSplatPath` future flags on `BrowserRouter`; MCP: add Chrome DevTools server to `.cursor/mcp.json` |
 | 2026-05-06 | Added Hero section (responsive layout, CTAs, accent card, i18n `hero.*` across 10 locales; resume link expects `public/resume.pdf`) |
 | 2026-05-06 | Git: ignore `package-lock.json`, stop tracking lockfile in repo     |
 | 2026-05-06 | Vite: enable Sass modern-compiler API; pin Vite to 5.4+ to suppress legacy JS API deprecation warnings |
