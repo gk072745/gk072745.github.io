@@ -182,6 +182,7 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Added `PENDING_WORK.md` as a task vault/checklist for next-session continuation |
 | 2026-05-06 | Projects/Certifications actions updated: always show Live/Code/Credential buttons; disable with private/unavailable tooltips when links can’t be shared |
 | 2026-05-06 | Content refresh: added Vue UI library project, adjusted project visibility (Nilaya/Foyr private handling), expanded skills stack, added 12th (SIA), and Masai certifications with pending links |
 | 2026-05-06 | About: replaced dummy “Operating style” with resume-aligned copy + added interactive focus tabs (Ownership/Feedback/Delivery loop) |
