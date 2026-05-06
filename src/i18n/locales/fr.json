@@ -8,8 +8,16 @@
   "nav": {
     "home": "Accueil"
   },
-  "home": {
-    "title": "Govind Kumawat",
-    "subtitle": "Portfolio à venir."
+  "hero": {
+    "badge": "Ouvert aux opportunités",
+    "name": "Govind Kumawat",
+    "role": "Ingénieur logiciel · Plateformes web",
+    "lead": "Je construis des produits fiables et performants de bout en bout — de l’architecture à la livraison, en passant par la maintenabilité et l’impact utilisateur mesurable.",
+    "ctaProjects": "Voir le travail",
+    "ctaContact": "Contact",
+    "ctaResume": "CV",
+    "cardEyebrow": "Principes",
+    "cardTitle": "Livrer avec clarté",
+    "cardBody": "Des systèmes solides, des interfaces accessibles et des itérations rapides — pour les équipes qui valorisent la qualité."
   }
 }

@@ -35,6 +35,7 @@ gk072745.github.io/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   │   ├── Hero/            # Hero section (landing)
 │   │   └── shared/          # Shared primitives (`SectionContainer`, etc.)
 │   ├── helpers/
 │   │   ├── animation.js      # cn(), motion class helpers
@@ -102,6 +103,8 @@ npm install
 
 `package-lock.json` is gitignored (not committed). Each checkout resolves dependencies from `package.json`; run `npm install` after pulling.
 
+Add your PDF at [`public/resume.pdf`](public/resume.pdf) so the Hero **Resume** button works (otherwise the file will 404 until you add it).
+
 ### Run locally
 
 ```bash
@@ -158,6 +161,7 @@ Mixins for these live in [`src/styles/_mixins.scss`](src/styles/_mixins.scss); t
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-06 | Added Hero section (responsive layout, CTAs, accent card, i18n `hero.*` across 10 locales; resume link expects `public/resume.pdf`) |
 | 2026-05-06 | Git: ignore `package-lock.json`, stop tracking lockfile in repo     |
 | 2026-05-06 | Vite: enable Sass modern-compiler API; pin Vite to 5.4+ to suppress legacy JS API deprecation warnings |
 | 2026-05-06 | Foundation: modular SCSS (tokens/theme/mixins/animations/utils), SectionContainer shared shell, hooks/helpers baseline, react-i18next +10 locales wired in shell |

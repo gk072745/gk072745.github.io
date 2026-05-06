@@ -8,8 +8,16 @@
   "nav": {
     "home": "ホーム"
   },
-  "home": {
-    "title": "Govind Kumawat",
-    "subtitle": "ポートフォリオは準備中です。"
+  "hero": {
+    "badge": "オファー募集中",
+    "name": "Govind Kumawat",
+    "role": "ソフトウェアエンジニア · Webプラットフォーム",
+    "lead": "アーキテクチャからリリース、保守性と測定可能なユーザー価値まで、信頼性の高い高性能なプロダクトを一気通貫で構築します。",
+    "ctaProjects": "作品を見る",
+    "ctaContact": "連絡",
+    "ctaResume": "履歴書",
+    "cardEyebrow": "価値観",
+    "cardTitle": "明快に届ける",
+    "cardBody": "堅牢なシステム、分かりやすいUI、速い改善サイクル — 品質を大切にするチームのための設計です。"
   }
 }

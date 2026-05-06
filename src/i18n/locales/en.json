@@ -8,8 +8,16 @@
   "nav": {
     "home": "Home"
   },
-  "home": {
-    "title": "Govind Kumawat",
-    "subtitle": "Portfolio coming soon."
+  "hero": {
+    "badge": "Open to opportunities",
+    "name": "Govind Kumawat",
+    "role": "Software Engineer · Web platforms",
+    "lead": "I build reliable, high-performance products end to end — from architecture and delivery to maintainability and measurable user impact.",
+    "ctaProjects": "View work",
+    "ctaContact": "Contact",
+    "ctaResume": "Resume",
+    "cardEyebrow": "Principles",
+    "cardTitle": "Ship with clarity",
+    "cardBody": "Strong systems, approachable interfaces, and fast iteration — built for teams that care about quality."
   }
 }

@@ -8,8 +8,16 @@
   "nav": {
     "home": "홈"
   },
-  "home": {
-    "title": "Govind Kumawat",
-    "subtitle": "포트폴리오 준비 중입니다."
+  "hero": {
+    "badge": "채용·협업 제안 환영",
+    "name": "Govind Kumawat",
+    "role": "소프트웨어 엔지니어 · 웹 플랫폼",
+    "lead": "아키텍처와 배포부터 유지보수와 측정 가능한 사용자 임팩트까지, 끝에서 끝까지 신뢰할 수 있고 고성능인 제품을 만듭니다.",
+    "ctaProjects": "작업 보기",
+    "ctaContact": "연락",
+    "ctaResume": "이력서",
+    "cardEyebrow": "원칙",
+    "cardTitle": "명확하게 전달",
+    "cardBody": "단단한 시스템, 이해하기 쉬운 UI, 빠른 반복 — 품질을 중시하는 팀을 위한 접근입니다."
   }
 }
