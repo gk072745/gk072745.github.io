@@ -182,6 +182,7 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-08 | Updated browser favicon to use profile image asset (`src/assets/dp.jpeg`) for personal branding |
 | 2026-05-08 | Certifications refined to a single Masai credential entry and linked directly to local certificate asset (`src/assets/masai-ciritficate.jpg`) |
 | 2026-05-08 | Education order updated to show Masai School first, followed by 12th Standard |
 | 2026-05-08 | Projects tooltip fix: replaced native disabled action buttons with aria-disabled buttons so private/unavailable hover titles render reliably |
