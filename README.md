@@ -182,6 +182,7 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-08 | Hero polish: added infinite typewriter animation for name with blinking cursor (type → pause → delete loop) |
 | 2026-05-08 | Added global cursor UX rule: pointer for standard clickable elements and not-allowed for disabled controls |
 | 2026-05-06 | Added `PENDING_WORK.md` as a task vault/checklist for next-session continuation |
 | 2026-05-06 | Projects/Certifications actions updated: always show Live/Code/Credential buttons; disable with private/unavailable tooltips when links can’t be shared |

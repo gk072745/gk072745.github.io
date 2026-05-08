@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HiOutlineArrowRight } from 'react-icons/hi2'
 
@@ -11,6 +11,45 @@ const RESUME_PATH = resumePdfUrl
 
 function Hero() {
   const { t } = useTranslation()
+  const heroName = t('hero.name')
+  const [typedName, setTypedName] = useState('')
+  const [deleting, setDeleting] = useState(false)
+
+  const targetName = useMemo(() => heroName, [heroName])
+
+  useEffect(() => {
+    if (!targetName) return
+    const atFull = typedName === targetName
+    const atEmpty = typedName.length === 0
+
+    if (!deleting && atFull) {
+      const holdTimer = window.setTimeout(() => {
+        setDeleting(true)
+      }, 5000)
+      return () => window.clearTimeout(holdTimer)
+    }
+
+    if (deleting && atEmpty) {
+      const restartTimer = window.setTimeout(() => {
+        setDeleting(false)
+      }, 600)
+      return () => window.clearTimeout(restartTimer)
+    }
+
+    const stepDelay = deleting ? 145 : 210
+    const timer = window.setTimeout(() => {
+      setTypedName((prev) =>
+        deleting ? prev.slice(0, -1) : targetName.slice(0, prev.length + 1)
+      )
+    }, stepDelay)
+
+    return () => window.clearTimeout(timer)
+  }, [deleting, targetName, typedName])
+
+  useEffect(() => {
+    setTypedName('')
+    setDeleting(false)
+  }, [targetName])
 
   return (
     <SectionContainer
@@ -35,7 +74,8 @@ function Hero() {
             id="hero-name"
             className="mb-2 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight tracking-tight text-zinc-900 dark:text-zinc-50"
           >
-            {t('hero.name')}
+            <span>{typedName || '\u00a0'}</span>
+            <span className="typewriter-cursor" aria-hidden />
           </h1>
 
           <p className="mb-6 text-[clamp(1.25rem,2.4vw,2rem)] font-medium leading-tight text-zinc-800 dark:text-zinc-200">
