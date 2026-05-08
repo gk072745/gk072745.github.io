@@ -17,6 +17,25 @@
   body {
     @apply min-h-screen bg-zinc-50 text-zinc-900 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-50;
   }
+
+  :where(
+      a[href],
+      button,
+      summary,
+      [role='button'],
+      [role='tab'],
+      [role='option'],
+      [role='menuitem'],
+      input[type='button'],
+      input[type='submit'],
+      input[type='reset']
+    ) {
+    cursor: pointer;
+  }
+
+  :where(button:disabled, [aria-disabled='true'], input:disabled) {
+    cursor: not-allowed;
+  }
 }
 
 /**
