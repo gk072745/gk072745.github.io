@@ -247,7 +247,7 @@ export const portfolioContent = {
     summary:
       "Prefer email for opportunities and collaboration. If you’re hiring or building something ambitious, let’s talk.",
     formEndpoint: "https://api.web3forms.com/submit",
-    formAccessKey: "",
+    formAccessKey: "eb1fb267-19dc-452a-acb9-63b9a83dd79a",
     defaultSubject: "Portfolio inquiry",
     email: "gk072745@gmail.com",
     phone: "+91 9461686381",
