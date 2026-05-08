@@ -182,6 +182,13 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-08 | Certifications refined to a single Masai credential entry and linked directly to local certificate asset (`src/assets/masai-ciritficate.jpg`) |
+| 2026-05-08 | Education order updated to show Masai School first, followed by 12th Standard |
+| 2026-05-08 | Projects tooltip fix: replaced native disabled action buttons with aria-disabled buttons so private/unavailable hover titles render reliably |
+| 2026-05-08 | Projects section narrowed to React/Vue component libraries only; added React demo+GitHub links and Vue live docs link with private-repo tooltip state |
+| 2026-05-08 | Experience tech stacks updated per project: standardized Vue/JavaScript stack, BuildWise set to Vuex, and Beautiful Homes set to Vue2 + Vuex |
+| 2026-05-08 | Experience UI refinement: standardized role line to "Frontend Developer - Altersquare" and added client metadata display (Client Project + conditional Client Company) |
+| 2026-05-08 | Finalized Experience content: added role-wise timelines/order for Foyr Neo 3.0, eDesign, Nilaya, BuildWise, and Beautiful Homes support phase; aligned role title to Frontend Developer |
 | 2026-05-08 | Hero polish: added infinite typewriter animation for name with blinking cursor (type → pause → delete loop) |
 | 2026-05-08 | Added global cursor UX rule: pointer for standard clickable elements and not-allowed for disabled controls |
 | 2026-05-06 | Added `PENDING_WORK.md` as a task vault/checklist for next-session continuation |

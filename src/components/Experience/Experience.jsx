@@ -42,53 +42,62 @@ function Experience() {
           </h3>
 
           <div className="flex flex-col">
-            {experience.roles.map((role) => (
-              <article
-                key={role.id}
-                className="border-t border-zinc-200 pb-8 pt-8 first:border-t-0 first:pt-0 last:pb-0 dark:border-zinc-700/75"
-              >
-                <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-x-4">
-                  <div>
-                    <p className="font-semibold text-zinc-900 dark:text-zinc-50">{role.role}</p>
-                    <p className="text-sm font-medium text-violet-600 dark:text-violet-400">{role.company}</p>
+            {experience.roles.map((role) => {
+              const clientProjectLabel =
+                role.clientCompany && role.clientCompany !== role.clientProject
+                  ? `${role.clientProject} (${role.clientCompany})`
+                  : role.clientProject
+
+              return (
+                <article
+                  key={role.id}
+                  className="border-t border-zinc-200 pb-8 pt-8 first:border-t-0 first:pt-0 last:pb-0 dark:border-zinc-700/75"
+                >
+                  <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:gap-x-4">
+                    <div>
+                      <p className="font-semibold text-zinc-900 dark:text-zinc-50">{role.role}</p>
+                      <p className="text-sm font-medium text-violet-600 dark:text-violet-400">
+                        <span>{clientProjectLabel}</span>
+                      </p>
+                    </div>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                      <span>{role.location}</span>
+                      <span className="mx-1 text-zinc-400 dark:text-zinc-600" aria-hidden>
+                        ·
+                      </span>
+                      <span>
+                        {role.start}–{role.end}
+                      </span>
+                    </p>
                   </div>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    <span>{role.location}</span>
-                    <span className="mx-1 text-zinc-400 dark:text-zinc-600" aria-hidden>
-                      ·
-                    </span>
-                    <span>
-                      {role.start}–{role.end}
-                    </span>
-                  </p>
-                </div>
 
-                <ul className="grid gap-0">
-                  {role.points.map((point, index) => (
-                    <HighlightCheckRow key={`${role.id}-${index}`} lang="en">
-                      {point}
-                    </HighlightCheckRow>
-                  ))}
-                </ul>
-
-                <div className="flex flex-col gap-2 border-t border-zinc-100 pt-3 dark:border-zinc-700/50">
-                  <p
-                    id={`${role.id}-tech-stack-label`}
-                    className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
-                  >
-                    {t('experience.techStackLabel')}
-                  </p>
-                  <ul
-                    className="flex flex-wrap items-center gap-3"
-                    aria-labelledby={`${role.id}-tech-stack-label`}
-                  >
-                    {role.tech.map((tech) => (
-                      <TechPill key={`${role.id}-${tech}`} tech={tech} />
+                  <ul className="grid gap-0">
+                    {role.points.map((point, index) => (
+                      <HighlightCheckRow key={`${role.id}-${index}`} lang="en">
+                        {point}
+                      </HighlightCheckRow>
                     ))}
                   </ul>
-                </div>
-              </article>
-            ))}
+
+                  <div className="flex flex-col gap-2 border-t border-zinc-100 pt-3 dark:border-zinc-700/50">
+                    <p
+                      id={`${role.id}-tech-stack-label`}
+                      className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
+                    >
+                      {t('experience.techStackLabel')}
+                    </p>
+                    <ul
+                      className="flex flex-wrap items-center gap-3"
+                      aria-labelledby={`${role.id}-tech-stack-label`}
+                    >
+                      {role.tech.map((tech) => (
+                        <TechPill key={`${role.id}-${tech}`} tech={tech} />
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
 

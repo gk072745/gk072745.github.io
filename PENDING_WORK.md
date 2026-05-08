@@ -2,24 +2,6 @@
 
 This file tracks what is still pending so we can continue tomorrow quickly.
 
-## 1) Content finalization
-
-- Replace remaining placeholder/dummy text in all sections with final copy.
-- Confirm exact employment timeline (month + year) for all client/project phases.
-- Finalize polished experience bullets for:
-  - Nilaya Anthology (Asian Paints)
-  - Beautiful Homes (Asian Paints)
-  - BuildWise
-  - eDesign
-  - Foyr Neo 3.0
-- Verify final project titles, impact statements, and ordering.
-
-## 2) Project links and visibility
-
-- Add real public links for projects where possible.
-- Keep private projects disabled with tooltip (already supported) and update tooltip messages if needed.
-- Add final repo/demo links for React/Vue UI libraries (or keep private by decision).
-
 ## 3) Certifications and education details
 
 - Add real certification URLs once available.
@@ -57,4 +39,3 @@ This file tracks what is still pending so we can continue tomorrow quickly.
 - Final build + deploy flow:
   - `npm run build`
   - `npm run deploy`
-

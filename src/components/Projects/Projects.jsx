@@ -102,7 +102,8 @@ function Projects() {
               ) : (
                 <button
                   type="button"
-                  disabled
+                  aria-disabled="true"
+                  onClick={(event) => event.preventDefault()}
                   title={project.liveDisabledReason || 'Not publicly available.'}
                   className={disabledLinkBtn}
                 >
@@ -123,7 +124,8 @@ function Projects() {
               ) : (
                 <button
                   type="button"
-                  disabled
+                  aria-disabled="true"
+                  onClick={(event) => event.preventDefault()}
                   title={project.repoDisabledReason || 'Private repository.'}
                   className={disabledLinkBtn}
                 >
