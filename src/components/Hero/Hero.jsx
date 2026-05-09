@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HiOutlineArrowRight } from 'react-icons/hi2'
 
@@ -9,13 +9,54 @@ import resumePdfUrl from '../../assets/Govind_Kumawat_Resume_.pdf'
 
 const RESUME_PATH = resumePdfUrl
 
+const MAX_TILT_DEG = 11
+const MAX_LIFT_PX = 14
+
 function Hero() {
   const { t } = useTranslation()
   const heroName = t('hero.name')
   const [typedName, setTypedName] = useState('')
   const [deleting, setDeleting] = useState(false)
+  const [cardTilt, setCardTilt] = useState({ rx: 0, ry: 0, tz: 0 })
+  const [cardPointerInside, setCardPointerInside] = useState(false)
+  const heroCardWrapRef = useRef(null)
 
   const targetName = useMemo(() => heroName, [heroName])
+
+  const [reduceMotion, setReduceMotion] = useState(false)
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const apply = () => setReduceMotion(mq.matches)
+    apply()
+    mq.addEventListener('change', apply)
+    return () => mq.removeEventListener('change', apply)
+  }, [])
+
+  const onHeroCardPointerMove = (event) => {
+    if (reduceMotion) return
+    const el = heroCardWrapRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width
+    const y = (event.clientY - rect.top) / rect.height
+    const nx = Math.min(1, Math.max(-1, x * 2 - 1))
+    const ny = Math.min(1, Math.max(-1, y * 2 - 1))
+    setCardTilt({
+      rx: -ny * MAX_TILT_DEG,
+      ry: nx * MAX_TILT_DEG,
+      tz: MAX_LIFT_PX,
+    })
+  }
+
+  const onHeroCardPointerLeave = () => {
+    setCardPointerInside(false)
+    setCardTilt({ rx: 0, ry: 0, tz: 0 })
+  }
+
+  const onHeroCardPointerEnter = () => {
+    setCardPointerInside(true)
+  }
 
   useEffect(() => {
     if (!targetName) return
@@ -117,7 +158,15 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[200px] lg:order-none lg:min-h-[280px]" aria-hidden="true">
+        <div
+          ref={heroCardWrapRef}
+          className="relative min-h-[200px] lg:order-none lg:min-h-[280px]"
+          style={{ perspective: 'min(1200px, 100vw)' }}
+          aria-hidden="true"
+          onPointerMove={onHeroCardPointerMove}
+          onPointerEnter={onHeroCardPointerEnter}
+          onPointerLeave={onHeroCardPointerLeave}
+        >
           <div
             className="pointer-events-none absolute -right-[10%] -top-[20%] size-[min(420px,90vw)] rounded-full opacity-75 dark:opacity-55 lg:opacity-75"
             style={{
@@ -125,7 +174,16 @@ function Hero() {
                 'radial-gradient(circle at 30% 30%, rgb(139 92 246 / 0.45), transparent 62%)',
             }}
           />
-          <div className="relative mx-auto max-w-[420px] rounded-xl border border-zinc-200 bg-white/80 p-8 shadow-lg backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900/80 lg:mx-0">
+          <div
+            className="relative mx-auto max-w-[420px] rounded-xl border border-zinc-200 bg-white/80 p-8 shadow-lg backdrop-blur-md will-change-transform dark:border-zinc-800 dark:bg-zinc-900/80 lg:mx-0"
+            style={{
+              transformStyle: reduceMotion ? 'flat' : 'preserve-3d',
+              transform: reduceMotion
+                ? undefined
+                : `rotateX(${cardTilt.rx}deg) rotateY(${cardTilt.ry}deg) translateZ(${cardTilt.tz}px)`,
+              transition: cardPointerInside ? 'none' : 'transform 0.45s cubic-bezier(0.23, 1, 0.32, 1)',
+            }}
+          >
             <div className="mb-4 h-1 w-12 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500" />
             <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
               {t('hero.cardEyebrow')}

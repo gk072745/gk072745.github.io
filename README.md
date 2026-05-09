@@ -182,6 +182,7 @@ In code, use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:
 
 | Date       | Change                                                              |
 |------------|---------------------------------------------------------------------|
+| 2026-05-09 | Hero: 3D pointer-tilt on accent card (rotateX/Y + translateZ) with smooth reset; respects `prefers-reduced-motion` |
 | 2026-05-09 | QuickDock popover: show only three skill highlights (Vue.js, React, Node.js) and cap displayed items at three |
 | 2026-05-08 | Updated browser favicon to use profile image asset (`src/assets/dp.jpeg`) for personal branding |
 | 2026-05-08 | Certifications refined to a single Masai credential entry and linked directly to local certificate asset (`src/assets/masai-ciritficate.jpg`) |
