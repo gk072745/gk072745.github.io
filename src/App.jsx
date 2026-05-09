@@ -125,11 +125,7 @@ function App() {
       <QuickDock
         name="Govind Kumawat"
         role="Software Engineer"
-        highlights={[
-          'React + TypeScript + Tailwind',
-          'Performance, DX, and accessibility',
-          'Shipped features end-to-end',
-        ]}
+        highlights={['Vue.js', 'React', 'Node.js']}
         resumeUrl={resumePdfUrl}
         ctaLabel={t('hero.ctaContact')}
         onCtaClick={() => {

@@ -156,7 +156,7 @@ function QuickDock({
   const pipRootRef = useRef(null)
 
   const cleanHighlights = useMemo(
-    () => highlights.filter(Boolean).slice(0, 4),
+    () => highlights.filter(Boolean).slice(0, 3),
     [highlights]
   )
 
