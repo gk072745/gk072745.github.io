@@ -5,7 +5,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md'
 import { HiBars3, HiOutlineXMark } from 'react-icons/hi2'
 
 import { LanguageSelect, QuickDock } from './components/shared'
-import resumePdfUrl from './assets/Govind_Kumawat_Resume_.pdf'
+import { RESUME_URLS } from './helpers/resumeUrls'
 import { useLocale } from './hooks/useLocale'
 import { useTheme } from './hooks/useTheme'
 import { getLanguageOptions } from './helpers/i18n'
@@ -126,7 +126,7 @@ function App() {
         name="Govind Kumawat"
         role="Software Engineer"
         highlights={['Vue.js', 'React', 'Node.js']}
-        resumeUrl={resumePdfUrl}
+        resumeUrls={RESUME_URLS}
         ctaLabel={t('hero.ctaContact')}
         onCtaClick={() => {
           window.location.hash = '#contact'

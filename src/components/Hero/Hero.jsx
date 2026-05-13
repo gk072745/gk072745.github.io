@@ -5,9 +5,10 @@ import { HiOutlineArrowRight } from 'react-icons/hi2'
 import { SectionContainer } from '../shared'
 import { cn } from '../../helpers/animation'
 
-import resumePdfUrl from '../../assets/Govind_Kumawat_Resume_.pdf'
-
-const RESUME_PATH = resumePdfUrl
+import {
+  DEFAULT_RESUME_URL,
+  pickRandomResumeUrl,
+} from '../../helpers/resumeUrls'
 
 const MAX_TILT_DEG = 11
 const MAX_LIFT_PX = 14
@@ -147,10 +148,13 @@ function Hero() {
               {t('hero.ctaContact')}
             </a>
             <a
-              href={RESUME_PATH}
+              href={DEFAULT_RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               download
+              onClick={(e) => {
+                e.currentTarget.href = pickRandomResumeUrl()
+              }}
               className="inline-flex min-h-[44px] items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold text-violet-600 underline-offset-4 transition-colors hover:text-fuchsia-500 hover:underline dark:text-violet-400 dark:hover:text-fuchsia-400"
             >
               {t('hero.ctaResume')}

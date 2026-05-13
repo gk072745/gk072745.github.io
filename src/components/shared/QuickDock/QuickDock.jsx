@@ -38,6 +38,20 @@ function copyDocumentStyles(fromDoc, toDoc) {
   })
 }
 
+function resumeLinkProps(resumeUrl, resumeUrls) {
+  const list =
+    resumeUrls?.length >= 2 ? resumeUrls : resumeUrl ? [resumeUrl] : []
+  const href = list[0] ?? resumeUrl ?? '/resume.pdf'
+  const onClick =
+    list.length >= 2
+      ? (e) => {
+          e.currentTarget.href =
+            list[Math.floor(Math.random() * list.length)]
+        }
+      : undefined
+  return { href, onClick }
+}
+
 function QuickDockCard({
   name,
   role,
@@ -46,8 +60,13 @@ function QuickDockCard({
   onCtaClick,
   onClose,
   resumeUrl,
+  resumeUrls,
   variant = 'full',
 }) {
+  const { href: resumeHref, onClick: onResumeClick } = resumeLinkProps(
+    resumeUrl,
+    resumeUrls
+  )
   const isPip = variant === 'pip'
   const pipHighlights = isPip ? highlights.filter(Boolean).slice(0, 3) : highlights
   return (
@@ -92,7 +111,8 @@ function QuickDockCard({
 
       <div className={cn('mt-5 flex flex-wrap gap-3 border-t border-zinc-200/90 pt-4 dark:border-zinc-700/75', isPip && 'mt-3 border-t-0 pt-0')}>
         <a
-          href={resumeUrl}
+          href={resumeHref}
+          onClick={onResumeClick}
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -149,6 +169,7 @@ function QuickDock({
   ctaLabel,
   onCtaClick,
   resumeUrl = '/resume.pdf',
+  resumeUrls,
 }) {
   const [open, setOpen] = useState(() => readBool(STORAGE_OPEN_KEY, false))
   const [pipPrimed, setPipPrimed] = useState(() => readBool(STORAGE_PIP_PRIMED_KEY, false))
@@ -219,6 +240,7 @@ function QuickDock({
           ctaLabel={null}
           onCtaClick={undefined}
           resumeUrl={resumeUrl}
+          resumeUrls={resumeUrls}
           variant="pip"
         />
       </div>
@@ -312,6 +334,7 @@ function QuickDock({
           onCtaClick={onCtaClick}
           onClose={() => setOpenSynced(false)}
           resumeUrl={resumeUrl}
+          resumeUrls={resumeUrls}
         />
       )}
     </div>
