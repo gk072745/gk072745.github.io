@@ -52,6 +52,7 @@ export const portfolioContent = {
         tech: [
           "JavaScript",
           "Vue.js",
+          "Nuxt",
           "Pinia",
           "SCSS",
           "Cursor AI",
